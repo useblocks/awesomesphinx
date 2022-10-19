@@ -15,6 +15,12 @@ FILTERS = [
     ['Framework :: Sphinx :: Theme']
 ]
 
+EXTRA_PROJECTS = [
+    'sphinx-copybutton',
+    'doxysphinx'
+
+]
+
 # Used during development to reduce amount of data to fetch
 # Normally a search contains ~600 findings
 MAX_DATA = 5000
@@ -58,7 +64,14 @@ while True:
 # Get tool specific data
 tools_data = {}
 
+# Add tools, which can not be found by above search
+for tool in EXTRA_PROJECTS:
+    if tool not in tools:
+        tools.append(tool)
+
+
 print(f'Found overall {len(tools)} sphinx tools')
+
 
 # Stop data collection, if we only want to get some data and not all
 tools = tools[0:MAX_DATA]

@@ -9,3 +9,23 @@ div.body {
     width: 100%;
     max-width: unset;
 }
+
+
+table.needs_style_awesome_red tr.head,
+tr.awesome_red td.needs_sphinx_type {
+    background-color: #ffe0d9 !important;
+}
+
+table.needs_style_awesome_blue tr.head,
+tr.awesome_blue td.needs_sphinx_type {
+    background-color: #cbd8e9 !important;
+}
+
+table.needs_style_awesome_green tr.head,
+tr.awesome_green td.needs_sphinx_type {
+    background-color: #dcfcdc !important;
+}
+
+td.needs_title {
+    font-weight: bold;
+}

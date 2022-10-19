@@ -9,6 +9,7 @@ NEED_FILE = 'awesome.json'
 
 NEED_TYPE = 'sw'
 
+MAX_NEEDS = 5000  # User for  development for faster tests
 
 def classifiers_check(value, classifiers):
     for cl in classifiers:
@@ -25,7 +26,11 @@ with open(PYPI_FILE, 'r') as f:
 needs = {}
 
 print(f'Constructing data for {len(pypi_data)} needs:', end='')
+counter = 0
 for name, data in pypi_data.items():
+    counter += 1
+    if counter >= MAX_NEEDS:
+        break
     
     # check  sphinx_type
     sphinx_type = 'other'
@@ -69,6 +74,17 @@ for name, data in pypi_data.items():
         code = data['info']['project_urls'].get('Repository', data['info']['project_urls'].get('Code', ''))
     
 
+    #last release
+    release_date = '1970-01-01T00:00:01' 
+    release_name = None
+    for release_name, release in data['releases'].items():
+        try:
+            if release[0]['upload_time'] > release_date:
+                release_date = release[0]['upload_time']
+                release_name = release_name
+        except Exception:
+            pass
+
 
     needs[name] = {
         "id": name.upper(),
@@ -84,6 +100,8 @@ for name, data in pypi_data.items():
         "pypi": data['info']['package_url'],
         "code": code,
         "website": data['info']['home_page'],
+        "release_date": release_date,
+        "release_name": release_name,
     }
     
     print('.', end='')
