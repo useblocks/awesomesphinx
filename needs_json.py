@@ -61,12 +61,12 @@ for name, data in pypi_data.items():
     try:
         monthly = data['awesome_stats']['month']
     except KeyError:
-        monthly = None
+        monthly = 0
 
     try:
         overall = data['awesome_stats']['overall']
     except KeyError:
-        overall = None
+        overall = 0
 
     # urls
     code = ""
