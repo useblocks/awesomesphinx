@@ -43,4 +43,18 @@ needs_extra_options = [
     'license',
     'monthly',
     'overall',
+    'code',
+    'pypi',
+    'website',
     ]
+
+
+needs_string_links = {
+    # Links to the related github issue
+    'links': {
+        'regex': r'^(?P<value>.*)$',
+        'link_url': '{{value}}',
+        'link_name': '{{value}}',
+        'options': ['code', 'pypi', 'website']
+    }
+}

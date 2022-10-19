@@ -63,6 +63,13 @@ for name, data in pypi_data.items():
     except KeyError:
         overall = None
 
+    # urls
+    code = ""
+    if data['info']['project_urls']:
+        code = data['info']['project_urls'].get('Repository', data['info']['project_urls'].get('Code', ''))
+    
+
+
     needs[name] = {
         "id": name.upper(),
         #"description": data['info']['description'],
@@ -74,6 +81,9 @@ for name, data in pypi_data.items():
         "monthly": monthly,
         "overall": overall,
         "tags": [],
+        "pypi": data['info']['package_url'],
+        "code": code,
+        "website": data['info']['home_page'],
     }
     
     print('.', end='')

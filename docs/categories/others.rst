@@ -11,6 +11,6 @@ Overview
 Data
 ----
 
-.. needimport:: /../awesome.json
+.. needimport:: /../data/20221019_awesome.json
    :tags: imported 
 
