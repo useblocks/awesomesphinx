@@ -3,12 +3,26 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-Welcome to awesome-sphinx's documentation!
-==========================================
+Awesome Sphinx
+==============
 
-.. toctree::
-   :maxdepth: 2
-   :caption: Contents:
+An automatically collectec and curated list of Sphinx extensions, themes and other Sphinx related projects.
+
+
+All data
+--------
+.. needtable::
+   :columns: id, title, sphinx_type, license, monthly, overall
+
+
+
+Categories
+----------
+
+.. toctree:: 
+
+   categories/others
+
 
 
 

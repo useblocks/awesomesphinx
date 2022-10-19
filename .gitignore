@@ -127,7 +127,9 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+.vscode
 
 
 pypi_data.json
+awesome.json
 .envrc

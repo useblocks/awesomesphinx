@@ -1,0 +1,11 @@
+div.document {
+    width: 100%;
+    width: 100vw;
+    max-width: 1490px;
+    padding:10px 5%;
+}
+
+div.body {
+    width: 100%;
+    max-width: unset;
+}

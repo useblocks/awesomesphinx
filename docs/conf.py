@@ -13,7 +13,9 @@ author = 'team useblockjs'
 # -- General configuration ---------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration
 
-extensions = []
+extensions = [
+    'sphinx_needs',
+    'sphinxcontrib.plantuml']
 
 templates_path = ['_templates']
 exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store']
@@ -25,3 +27,20 @@ exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store']
 
 html_theme = 'alabaster'
 html_static_path = ['_static']
+html_css_files = ['custom.css']
+
+
+#  NEED CONFIG
+
+needs_id_regex = r'.*'
+needs_types = [dict(directive="sw", title="Software", prefix="S_", color="#BFD8D2", style="card"),
+           ]
+
+
+needs_extra_options = [
+    'category',
+    'sphinx_type',
+    'license',
+    'monthly',
+    'overall',
+    ]
