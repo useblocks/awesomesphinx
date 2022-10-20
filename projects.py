@@ -13,8 +13,13 @@ PROJECT_FILTERS = [
 # List of projects, which do not have set the above classifiers but shall be
 # documented as well.
 EXTRA_PROJECTS = [
+    'sphinx-test-reports',
+    'sphinx-collections',
+    'sphinx-preview',
+    'sphinx-data-viewer',
     'sphinx-copybutton',
-    'doxysphinx'
+    'doxysphinx',
+    'breathe'
 ]
 
 # List of of projects, which have set one of the above classifiers, but shall be ignored.
@@ -22,3 +27,13 @@ EXTRA_PROJECTS = [
 IGNORE_PROJECTS = [
 
 ]
+
+# Dict of allowed tags for a project.
+# Is used to generate tag specific overviews.
+# Key is used for filtering, the value as documentation
+PROJECT_TAGS = {
+    'needs': 'All Sphinx-Needs related extensions and maybe themes.',
+    'image_processing': 'Extensions dealing with images and their presentation.',
+    'layout':  'Extension which help to structure your dcument data e.g. by grids or dropdowns.',
+    'pdf': 'Extensions which are dealing with PDFs.',
+}

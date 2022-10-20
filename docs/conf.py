@@ -8,8 +8,13 @@
 
 from ast import arg
 from datetime import datetime
+import os
+import sys
 from sphinx_needs.api import add_dynamic_function
 
+# Make Python aware of the project config file
+sys.path.append(os.path.join(os.path.dirname(__file__), '..'))
+from projects import PROJECT_TAGS
 
 project = 'awesome-sphinx'
 copyright = '2022, team useblockjs'
@@ -24,7 +29,7 @@ extensions = [
     ]
 
 templates_path = ['_templates']
-exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store']
+exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store', '_awesome_templates']
 
 
 
@@ -34,7 +39,9 @@ exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store']
 html_theme = 'alabaster'
 html_static_path = ['_static']
 html_css_files = ['custom.css']
-
+html_context = {
+    'project_tags': PROJECT_TAGS
+}
 
 #  NEED CONFIG
 
@@ -62,7 +69,8 @@ needs_extra_options = [
     'pypi_nice',
     'website_nice',
     'featured',
-    'color'
+    'color',
+    'deprecated'
     ]
 
 
@@ -161,6 +169,20 @@ def points(app, need, needs, *args, **kwargs):
     points = release_points + download_points
     return points
 
+def rstjinja(app, docname, source):
+    """
+    Render our pages as a jinja template for fancy templating goodness.
+    
+    Source: https://ericholscher.com/blog/2016/jul/25/integrating-jinja-rst-sphinx/
+    """
+    src = source[0]
+    rendered = app.builder.templates.render_string(
+        src, app.config.html_context
+    )
+    source[0] = rendered
+
 def setup(app):
+        app.connect("source-read", rstjinja, 50000)
+        
         add_dynamic_function(app, days_since_build)
         add_dynamic_function(app, points)

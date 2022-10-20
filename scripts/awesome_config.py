@@ -24,6 +24,17 @@ API_SLEEP = 2  # Wait time for API, if too many requests were made
 # Maximum amount of API sleeps in a row, until the loop gets stopped
 MAX_API_SLEEPS = 10
 
+BIGQUERY_DL_MONTH = """
+SELECT COUNT(*) AS num_downloads
+FROM `bigquery-public-data.pypi.file_downloads`
+WHERE file.project = '{}'
+  -- Only query the last 30 days of history
+  AND DATE(timestamp)
+    BETWEEN DATE_SUB(CURRENT_DATE(), INTERVAL 30 DAY)
+    AND CURRENT_DATE()
+
+"""
+
 ##################################################
 # NEEDS_JSON.PY configs
 ##################################################

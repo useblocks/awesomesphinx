@@ -79,6 +79,43 @@ The values for ``points`` and ``release_days`` get calculated automatically.
    maintained by hand. It is much better to release the package on PYPI with the correct
    classifiers. 
 
+Developing docs
+---------------
+
+Run scripts
+~~~~~~~~~~~
+The ``pypi_json.py`` script is using Google BigQuery to get information about the download numbers of PyPi.
+You need a google cloud account and a **authentication-file** to run these queries. 
+
+The installation guide of `pypinfo <https://github.com/ofek/pypinfo/blob/master/README.rst#installation>`_ has a create
+chapter how to get and configure a google cloud account.
+
+The **authentication-file** must be set via ENV variable.
+If you use our ``.vscode/launch.json`` config, this is set automatically to 
+``"GOOGLE_APPLICATION_CREDENTIALS": "${workspaceFolder}/secrets/google_cloud.json"``
+
+Technical background
+~~~~~~~~~~~~~~~~~~~~
+
+The AwesomeSphinx data workflow is as follows:
+
+1. ``/scripts/pypi_json.py`` gets executed
+
+   1. Search for packages on PyPi by classifiers
+   2. Requests package info from PyPi for each package
+   3. Queries PyPi-BigQuery-data for download numbers of last 30 days
+   4. Stores all data in a ``pypi_data.json`` files
+
+2. ``/scripts/needs_json.py`` gets executed
+
+   1. Loads ``pypi_data.json``
+   2. Extracts needed data only
+   3. Constructs need-objects internally
+   4. Creates an ``awesome.json``, which contains the need-objects and is compliant to the Sphinx-Needs ``needs.json`` format.
 
 
+3. Sphinx build gets started
 
+   1. ``needimport`` for ``awesome.json`` is used to import need-object for specific categories 
+   2. Jinja templates get rendered and injects data
+   3. Value calculation is done via ``dynamic functions`` feature of Sphinx-Needs

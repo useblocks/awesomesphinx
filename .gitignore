@@ -132,3 +132,5 @@ dmypy.json
 pypi_data.json
 awesome.json
 .envrc
+
+secrets/*

@@ -43,7 +43,7 @@ Points for release days:
    - * < 100
      * 5 
    - * < 200
-     * 4 
+     * 4 data-v
    - * < 400
      * 3 
    - * < 600
@@ -62,15 +62,7 @@ Points for monthly downloads:
    - * > 5000
      * 4 
    - * > 1000
-     * 3 
-   - * > 500
-     * 2 
-   - * > 100
-     * 1
-   - * < 100
-     * 0
-
-
+     * 3 data-v
 .. needbar:: Quality points
    :show_top_sum:
    :xlabels: 0,1,2,3,4,5,6,7,8,9,10
@@ -86,7 +78,7 @@ Projects with 9 points and higher.
 Active project
 --------------
 
-.. needpie:: Days since last release_days
+.. needpie:: Days since last release_daysdata-v
    :labels: <100, 100-199, 200-399, 400-799, >=800
 
    int(release_days) < 100
@@ -129,4 +121,5 @@ Categories
    categories/extensions
    categories/themes
    categories/others
+   tags
    contribute 

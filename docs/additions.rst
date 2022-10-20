@@ -17,6 +17,20 @@ Specific Need objects
 
 .. needextend:: SPHINX-NEEDS
    :featured: True
+   :tags: needs
+
+.. needextend:: SPHINXCONTRIB-NEEDS
+   :deprecated: True   
+   :tags: needs
+   :links: SPHINX-NEEDS
+
+.. needextend:: SPHINX-MODELING
+   :tags: needs
+
+.. needextend:: SPHINX-SIMPLEPDF
+   :featured: True
+   :sphinx_type: extension
+   :tags: pdf
 
 .. needextend:: SPHINX-IMMATERIAL
    :featured: True

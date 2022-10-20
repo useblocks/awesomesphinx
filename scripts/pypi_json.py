@@ -7,11 +7,31 @@ import xmlrpc.client
 import requests
 import time
 import pypistats
+import sys
+import os
+from threading import Thread
+from google.cloud import bigquery
 
 # Make Python aware of the awesom_config file
 sys.path.append(os.path.dirname(__file__))
 from awesome_config import *
 
+
+def get_dl_month(name, results):
+    client = bigquery.Client()
+    query_job = client.query(BIGQUERY_DL_MONTH.format(name))
+    query_results = query_job.result()
+    for row in query_results:
+        month_stats = row.num_downloads
+
+    results[name] = month_stats
+    print(f'{name} query done')
+
+def get_package_data(name, results):
+    r = requests.get(f'https://pypi.org/pypi/{name}/json')
+    tool_data = r.json()
+    results[name] = tool_data
+    print(f'Collected {name}')
 
 
 client = xmlrpc.client.ServerProxy('https://pypi.org/pypi')
@@ -22,6 +42,7 @@ tools = []
 
 counter = 0
 api_sleeps = 0
+
 while True:
     filter = PROJECT_FILTERS[counter]
     filter_tools = []
@@ -62,49 +83,44 @@ for tool in IGNORE_PROJECTS:
 
 print(f'Found overall {len(tools)} sphinx tools')
 
-
 # Stop data collection, if we only want to get some data and not all
 tools = tools[0:MAX_DATA]
 
 
-for index, tool in enumerate(tools):
-    r = requests.get(f'https://pypi.org/pypi/{tool}/json')
-    tool_data = r.json()
-    tools_data[tool] = tool_data
-    print(f'{index}/{len(tools)}. Collected {tool}')
-    
-
-# collect pypistats downloads numbers
-print(f'Collecting pypistats for {len(tools_data)} tools')
-
+print('Collection package data')
+threads = {}
+results = {}
 counter = 0
-while True:
-    package = list(tools_data.values())[counter]
-    name = package['info']['name']
+for name in tools:
+    threads[name] = Thread(target=get_package_data, args=(name, results))
+    threads[name].start()
+
+for thre in threads.values():
+    thre.join()
+
+tools_data = results
     
-    try:
-        month_stats = json.loads(pypistats.recent(name, "month", format="json"))
-        overall_stats = json.loads(pypistats.overall(package['info']['name'], mirrors=True, format="json"))
-    except Exception:
-        print(f'{name}: API-SLEEP for {API_SLEEP}s')
-        time.sleep(API_SLEEP)
-        api_sleeps += 1
-        if api_sleeps >= MAX_API_SLEEPS:
-            break
-    else:
+# collect pypistats downloads numbers
+print(f'Collecting PyPi BigQuery Stats for {len(tools_data)} tools')
 
-        month = int(month_stats['data']['last_month'])
-        overall = int(overall_stats['data'][0]['downloads'])
+threads = {}
+results = {}
+for name, package in tools_data.items():
+    threads[name] = Thread(target=get_dl_month, args=(name, results))
+    threads[name].start()
+    counter += 1
+    if counter % 10 == 0:
+        time.sleep(5)
 
-        package['awesome_stats'] = {
-            'month': month,
-            'overall': overall
-        }
-        print(f'{counter}/{len(tools_data)}:  {name}: {month:,} / {overall:,}')
-        counter += 1
-        api_sleeps = 0
-        if counter > len(tools_data) - 1:
-            break
+for thre in threads.values():
+    thre.join()
+
+
+for name, package in tools_data.items():
+    package['awesome_stats'] = {
+        'month': results[name],
+    }
+    print(f'{name}: {results[name]:,}')
 
 
 # Store tools_data as json
