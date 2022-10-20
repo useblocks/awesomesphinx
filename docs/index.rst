@@ -24,8 +24,53 @@ The export takes filter and sorting into account.
    :style_row: awesome_[[copy('color')]]
 
 
-Project with most points
-------------------------
+Healthy projects
+----------------
+AwesomeSphinx calculates a value to specify the health status of a project.
+This health status is simple called `points`.
+
+Points are given for downloads in the last month and time passed since the last release.
+Both values are then added to an overall result.
+
+The highest available amount of points is **10**, the lowest **0**.
+
+Points for release days:
+
+.. list-table:: 
+
+   - * Requirement
+     * Points
+   - * < 100
+     * 5 
+   - * < 200
+     * 4 
+   - * < 400
+     * 3 
+   - * < 600
+     * 2 
+   - * < 100
+     * 0 
+
+Points for monthly downloads:
+
+.. list-table:: 
+
+   - * Requirement
+     * Points
+   - * > 50000
+     * 5 
+   - * > 5000
+     * 4 
+   - * > 1000
+     * 3 
+   - * > 500
+     * 2 
+   - * > 100
+     * 1
+   - * < 100
+     * 0
+
+
 .. needbar:: Quality points
    :show_top_sum:
    :xlabels: 0,1,2,3,4,5,6,7,8,9,10
@@ -84,3 +129,4 @@ Categories
    categories/extensions
    categories/themes
    categories/others
+   contribute 

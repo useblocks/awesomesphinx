@@ -8,27 +8,10 @@ import requests
 import time
 import pypistats
 
-JSON_FILE = 'pypi_data.json'
-FILTERS = [
-    ['Framework :: Sphinx'],
-    ['Framework :: Sphinx :: Extension'],
-    ['Framework :: Sphinx :: Theme']
-]
+# Make Python aware of the awesom_config file
+sys.path.append(os.path.dirname(__file__))
+from awesome_config import *
 
-EXTRA_PROJECTS = [
-    'sphinx-copybutton',
-    'doxysphinx'
-
-]
-
-# Used during development to reduce amount of data to fetch
-# Normally a search contains ~600 findings
-MAX_DATA = 5000
-
-API_SLEEP = 2  # Wait time for API, if too many requests were made
-
-# Maximum amount of API sleeps in a row, until the loop gets stopped
-MAX_API_SLEEPS = 10
 
 
 client = xmlrpc.client.ServerProxy('https://pypi.org/pypi')
@@ -40,7 +23,7 @@ tools = []
 counter = 0
 api_sleeps = 0
 while True:
-    filter = FILTERS[counter]
+    filter = PROJECT_FILTERS[counter]
     filter_tools = []
     try:
         package_releases = client.browse(filter)
@@ -58,7 +41,7 @@ while True:
     else:
         api_sleeps = 0
         counter += 1
-        if counter > len(FILTERS) - 1:
+        if counter > len(PROJECT_FILTERS) - 1:
             break
 
 # Get tool specific data
@@ -68,6 +51,13 @@ tools_data = {}
 for tool in EXTRA_PROJECTS:
     if tool not in tools:
         tools.append(tool)
+
+# Remove not wanted tools
+for tool in IGNORE_PROJECTS:
+    try:
+        tools.remove(tool)
+    except ValueError:
+        pass
 
 
 print(f'Found overall {len(tools)} sphinx tools')

@@ -3,13 +3,13 @@ Creates a Sphinx-Needs compatilbe needs.json file from data collected by pypi_js
 """
 
 import json
+import sys
+import os
 
-PYPI_FILE = 'data/20221019_pypi_data.json'
-NEED_FILE = 'awesome.json'
+# Make Python aware of the awesom_config file
+sys.path.append(os.path.dirname(__file__))
+from awesome_config import *
 
-NEED_TYPE = 'sw'
-
-MAX_NEEDS = 5000  # User for  development for faster tests
 
 def classifiers_check(value, classifiers):
     for cl in classifiers:
