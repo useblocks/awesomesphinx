@@ -9,7 +9,7 @@ Tags
 
 .. needtable:: 
    :filter: "{{tag}}" in tags
-   :columns: id; title; content
+   :columns: id; title; package_summary
    :colwidths: 10, 30, 60
 
 .. needextract:: 

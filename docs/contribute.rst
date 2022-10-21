@@ -1,9 +1,11 @@
 Contribute
 ==========
 
+Updating package data
+---------------------
 
-Changing data
--------------
+Changing existing data
+~~~~~~~~~~~~~~~~~~~~~~
 To extend or manipulate the data for a specific extension or theme, please
 add an entry to the file ``/docs/additions.rst``.
 
@@ -19,24 +21,43 @@ change or replace values of imported elements.
 
 The above code is changing data of a need-element with the ID ``SUNPY-SPHINX-THEME``.
 It overwrites the ``sphinx_type`` with the value ``theme`` and 
-also extends the ``tags`` attribute  by a new value.
+also extends the ``tags`` attribute by a new value.
 
 Changing or better extending data is a common task in the awesomesphinx projects.
 It's mostly used to classify an extension or theme, to put it in specific categories for the user.
 
 
-Adding new element
-------------------
-Normally all extensions and themes get imported automatically from PIPY, if they have set the correct
+Adding new package
+~~~~~~~~~~~~~~~~~~
+Normally all extensions and themes get imported automatically from PiPy if they have set the correct
 classifiers in their packages.
 
-However, there are projects, which are not released ion PYPI or haven't set the right classifiers. 
-Therefore these packages needs to be registered in awesomesphinx by hand.
+However, there are projects, which are not released on PYPI or haven't set the right classifiers. 
+Therefore these packages need to be registered in awesomesphinx by hand.
 
 
 Register a package from PYPI
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-Please open the file ``/projects.py`` and add the the package-name to 
+++++++++++++++++++++++++++++
+
+Updating classifiers
+********************
+The best and most correct way of documenting a package here is to make sure it contains the 
+correct classifiers. If this is the case, it will be found on the upcoming import run.
+
+Each Python packaging tool does support setting classifiers. Please take a look at the related documentation to do so.
+
+The used classifiers for filtering are defined inside ``/projects.py`` file and are currently:
+
+.. literalinclude:: /../projects.py
+   :lines: 6-11
+
+
+Not matching classifiers
+************************
+If a package does not match the classifiers, which are used to search for packages on PyPi, it can be added
+by hand. However, it still must be available on PyPi!
+
+Please open the file ``/projects.py`` and add the package-name to 
 the ``EXTRA_PROJECTS`` list.
 
 .. code-block:: python
@@ -51,8 +72,8 @@ Please be sure that the used name can be used to identify the package on PyPi, f
 the name from the PyPi URL of the package.
 
 Manually add a new package
-~~~~~~~~~~~~~~~~~~~~~~~~~~
-Please open the related category-file from the ``/docs/categories`` folder.
+++++++++++++++++++++++++++
+Please open the related category file from the ``/docs/categories`` folder.
 
 After the ``needimport`` statement you are free to add a new Sphinx-Needs element, which represents
 the package.
@@ -76,7 +97,7 @@ The values for ``points`` and ``release_days`` get calculated automatically.
    Please be aware that this is the **worst** way of adding a new extension/theme.
 
    The values of ``release_date`` and ``monthly`` are not accurate and would need to be 
-   maintained by hand. It is much better to release the package on PYPI with the correct
+   maintained by hand. It is much better to release the package on PyPi with the correct
    classifiers. 
 
 Developing docs
@@ -85,10 +106,10 @@ Developing docs
 Run scripts
 ~~~~~~~~~~~
 The ``pypi_json.py`` script is using Google BigQuery to get information about the download numbers of PyPi.
-You need a google cloud account and a **authentication-file** to run these queries. 
+You need a google cloud account and an **authentication-file** to run these queries. 
 
-The installation guide of `pypinfo <https://github.com/ofek/pypinfo/blob/master/README.rst#installation>`_ has a create
-chapter how to get and configure a google cloud account.
+The installation guide of `pypinfo <https://github.com/ofek/pypinfo/blob/master/README.rst#installation>`_ has a great 
+chapter on how to get and configure a google cloud account.
 
 The **authentication-file** must be set via ENV variable.
 If you use our ``.vscode/launch.json`` config, this is set automatically to 
@@ -103,7 +124,7 @@ The AwesomeSphinx data workflow is as follows:
 
    1. Search for packages on PyPi by classifiers
    2. Requests package info from PyPi for each package
-   3. Queries PyPi-BigQuery-data for download numbers of last 30 days
+   3. Queries PyPi-BigQuery-data for download numbers of the last 30 days
    4. Stores all data in a ``pypi_data.json`` files
 
 2. ``/scripts/needs_json.py`` gets executed
@@ -111,11 +132,25 @@ The AwesomeSphinx data workflow is as follows:
    1. Loads ``pypi_data.json``
    2. Extracts needed data only
    3. Constructs need-objects internally
-   4. Creates an ``awesome.json``, which contains the need-objects and is compliant to the Sphinx-Needs ``needs.json`` format.
+   4. Creates an ``awesome.json``, which contains the need-objects and is compliant with the Sphinx-Needs ``needs.json`` format.
 
 
 3. Sphinx build gets started
 
    1. ``needimport`` for ``awesome.json`` is used to import need-object for specific categories 
-   2. Jinja templates get rendered and injects data
-   3. Value calculation is done via ``dynamic functions`` feature of Sphinx-Needs
+   2. Jinja templates get rendered and inject data
+   3. Value calculation is done via the ``dynamic functions`` feature of Sphinx-Needs
+
+
+Own Awesome X list
+------------------
+The used code and documentation configuration are not specific to Sphinx.
+
+With 1-2 line changes in the file ``/projects.py`` for the used classifiers filters, documentation projects can 
+be created for other Python-based projects.
+
+It must be currently Python-based, as the ``pypi_json.py`` script is using PyPi and BigQuery Table from PyPi to get needed data.
+If this gets changed as well, also other tools can be documented as well.
+
+
+

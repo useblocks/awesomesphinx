@@ -1,3 +1,14 @@
+The code and the documentation of AwesomeSphinx itself is available
+by the terms of the MIT license. See license text below.
+
+However, the data of each documented package is available under the license
+of the related project only. This may be BSD, MIT, GPL2 or GPL3, or anything 
+else.
+Please take a look into the related project, if you want to reuse or change 
+its data.
+
+---
+
 MIT License
 
 Copyright (c) 2022 useblocks

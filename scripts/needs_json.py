@@ -89,7 +89,8 @@ for name, data in pypi_data.items():
     needs[name] = {
         "id": name.upper(),
         #"description": data['info']['description'],
-        "description": data['info']['summary'],
+        "package_summary": data['info']['summary'],
+        "description": "",
         "title": name,
         "type": NEED_TYPE,
         "sphinx_type": sphinx_type,

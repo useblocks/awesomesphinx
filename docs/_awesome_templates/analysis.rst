@@ -11,4 +11,7 @@ Overview
 .. needtable::
    :filter: sphinx_type == "{{sphinx_type}}"
    :columns: {{table_columns}}
+   {% if col_width is defined -%}
+   :colwidths: {{col_width}}
+   {%- endif %}
 

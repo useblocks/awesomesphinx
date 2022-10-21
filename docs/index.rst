@@ -11,8 +11,8 @@ Featured themes and extensions
    :layout: clean
 
 
-All Extension & Themes
-----------------------
+All Extensions & Themes
+-----------------------
 To search for data in all table columns, simply use the search field on the upper right of the table.
 
 Use the export buttons to get the current view as PDF or Excel file.
@@ -24,102 +24,29 @@ The export takes filter and sorting into account.
    :style_row: awesome_[[copy('color')]]
 
 
-Healthy projects
+Table of content
 ----------------
-AwesomeSphinx calculates a value to specify the health status of a project.
-This health status is simple called `points`.
-
-Points are given for downloads in the last month and time passed since the last release.
-Both values are then added to an overall result.
-
-The highest available amount of points is **10**, the lowest **0**.
-
-Points for release days:
-
-.. list-table:: 
-
-   - * Requirement
-     * Points
-   - * < 100
-     * 5 
-   - * < 200
-     * 4 data-v
-   - * < 400
-     * 3 
-   - * < 600
-     * 2 
-   - * < 100
-     * 0 
-
-Points for monthly downloads:
-
-.. list-table:: 
-
-   - * Requirement
-     * Points
-   - * > 50000
-     * 5 
-   - * > 5000
-     * 4 
-   - * > 1000
-     * 3 data-v
-.. needbar:: Quality points
-   :show_top_sum:
-   :xlabels: 0,1,2,3,4,5,6,7,8,9,10
-
-   int(points) == 0, int(points) == 1,int(points) == 2,int(points) == 3,int(points) == 4,int(points) == 5,int(points) == 6,int(points) == 7,int(points) == 8,int(points) == 9,int(points) == 10
-
-Projects with 9 points and higher.
-
-.. needtable::
-   :filter: int(points) >= 9
-   :columns: id, title, sphinx_type, license, points, code_nice, pypi_nice, website_nice
-
-Active project
---------------
-
-.. needpie:: Days since last release_daysdata-v
-   :labels: <100, 100-199, 200-399, 400-799, >=800
-
-   int(release_days) < 100
-   int(release_days) >= 100 and int(release_days) < 200
-   int(release_days) >= 200 and int(release_days) < 400
-   int(release_days) >= 400 and int(release_days) < 800
-   int(release_days) >= 800 
-
-Projects with releases in the last 100 days
-
-.. needtable::
-   :filter: int(release_days) <= 100
-   :sort: release_days
-   :columns: id, title, sphinx_type, license, points, code_nice, pypi_nice, website_nice
-
-Famous projects
----------------
-.. needpie:: Monthly downloads
-   :labels: >50000,5000-49999, 1000-4999-,100-999,<100
-
-   (int(monthly) if monthly.isdigit() else 0) >= 50000
-   (int(monthly) if monthly.isdigit() else 0) < 50000 and (int(monthly) if monthly.isdigit() else 0) >= 5000
-   (int(monthly) if monthly.isdigit() else 0) < 5000 and (int(monthly) if monthly.isdigit() else 0) >= 1000
-   (int(monthly) if monthly.isdigit() else 0) < 1000 and (int(monthly) if monthly.isdigit() else 0) >= 100
-   (int(monthly) if monthly.isdigit() else 0) < 100
-
-Projects with over 5.000 downloads per month
-
-.. needtable::
-   :filter: (int(monthly) if monthly.isdigit() else 0) >= 5000
-   :sort: monthly
-   :columns: id, title, sphinx_type, license, monthly, overall
-
-
-Categories
-----------
 
 .. toctree:: 
+   :caption: Packages
+   :maxdepth: 2
 
    categories/extensions
    categories/themes
    categories/others
-   tags
+
+.. toctree::
+   :caption: Analysis    
+   :maxdepth: 2
+
+   analysis/tags
+   analysis/healthy
+   analysis/famous
+   analysis/active
+
+.. toctree::       
+   :caption: Collaboration
+   :maxdepth: 2
+   
    contribute 
+   license

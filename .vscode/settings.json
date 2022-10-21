@@ -1,3 +1,4 @@
 {
-    "esbonio.sphinx.confDir": "${workspaceFolder}/docs"
+    "esbonio.sphinx.confDir": "${workspaceFolder}/docs",
+    "grammarly.files.include": ["**/README.md", "**/readme.md", "**/*.txt", "**/*.rst"]
 }

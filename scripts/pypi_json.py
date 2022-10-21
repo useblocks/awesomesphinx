@@ -17,15 +17,17 @@ sys.path.append(os.path.dirname(__file__))
 from awesome_config import *
 
 
-def get_dl_month(name, results):
+def get_dl_month(name, results, counter):
     client = bigquery.Client()
-    query_job = client.query(BIGQUERY_DL_MONTH.format(name))
+    query_string = BIGQUERY_DL_MONTH.format(name)
+    query_job = client.query(query_string)
     query_results = query_job.result()
     for row in query_results:
         month_stats = row.num_downloads
-
-    results[name] = month_stats
-    print(f'{name} query done')
+        project = row.project
+        results[project] = month_stats
+    
+    print(f'{counter} query done')
 
 def get_package_data(name, results):
     r = requests.get(f'https://pypi.org/pypi/{name}/json')
@@ -85,7 +87,7 @@ print(f'Found overall {len(tools)} sphinx tools')
 
 # Stop data collection, if we only want to get some data and not all
 tools = tools[0:MAX_DATA]
-
+    
 
 print('Collection package data')
 threads = {}
@@ -100,30 +102,46 @@ for thre in threads.values():
 
 tools_data = results
     
-# collect pypistats downloads numbers
+# collect PyPi BigQuery downloads numbers
 print(f'Collecting PyPi BigQuery Stats for {len(tools_data)} tools')
 
 threads = {}
 results = {}
-for name, package in tools_data.items():
-    threads[name] = Thread(target=get_dl_month, args=(name, results))
+counter = 0
+
+# Chunks of project-names, to split a big query into smaller ones.
+# Currently not needed (+580 projects), but maybe query-string gets to big
+# in future
+tools_chunks = [tools_data.keys()]
+
+for chunk in tools_chunks:
+    name = "','".join(chunk)
+    threads[name] = Thread(target=get_dl_month, args=(name, results, counter))
     threads[name].start()
     counter += 1
-    if counter % 10 == 0:
-        time.sleep(5)
 
 for thre in threads.values():
     thre.join()
 
 
 for name, package in tools_data.items():
-    package['awesome_stats'] = {
-        'month': results[name],
-    }
-    print(f'{name}: {results[name]:,}')
+    try:
+        package['awesome_stats'] = {
+            'month': results[name],
+        }
+        print(f'{name}: {results[name]:,}')
+    except KeyError:
+        package['awesome_stats'] = {
+            'month': 0,
+        }
+    print(f"{name}: {package['awesome_stats']['month']:,}")
+
 
 
 # Store tools_data as json
 print(f'Storing data into {JSON_FILE}')
 with open(JSON_FILE, 'w') as f:
     json.dump(tools_data, f, sort_keys=True, indent=4)
+
+print('Done. Exit now!')
+

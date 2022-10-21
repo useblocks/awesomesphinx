@@ -10,5 +10,4 @@ Data
 ----
 
 .. needimport:: /../awesome.json
-   :tags: imported 
    :filter: sphinx_type == "{{sphinx_type}}"

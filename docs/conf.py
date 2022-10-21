@@ -53,6 +53,7 @@ needs_types = [
 
 
 needs_extra_options = [
+    'package_summary',
     'category',
     'sphinx_type',
     'license',
@@ -64,13 +65,15 @@ needs_extra_options = [
     'release_date',
     'release_name',
     'release_days',
+    'download_points'
+    'release_points',
     'points',
     'code_nice',
     'pypi_nice',
     'website_nice',
     'featured',
     'color',
-    'deprecated'
+    'deprecated',
     ]
 
 
@@ -96,7 +99,9 @@ needs_string_links = {
 needs_global_options = {
    'collapse': 'True',
    'release_days': ("[[days_since_build('release_date')]]", "type == 'sw'"),
-   'points': ("[[points()]]", "type == 'sw'"),
+   'release_points': ("[[points('release')]]", "type == 'sw'"),
+   'download_points': ("[[points('download')]]", "type == 'sw'"),
+   'points': ("[[points('all')]]", "type == 'sw'"),
    'code_nice': ("[[copy('code')]]", "type == 'sw'"),
    'pypi_nice': ("[[copy('pypi')]]", "type == 'sw'"),
    'website_nice': ("[[copy('website')]]", "type == 'sw'"),
@@ -108,6 +113,9 @@ needs_global_options = {
    'style': [
         ("awesome_[[copy('color')]]", "type=='sw'"),
    ],
+   'template': [
+        ("software", "type=='sw'"),
+   ]
 }
 
 needs_variant_options = ["status"]  # Not needed, but workarund to avoid a bug and some warnings
@@ -129,45 +137,52 @@ def days_since_build(app, need, needs, *args, **kwargs):
     date_obj = datetime.fromisoformat(date)
     delta = datetime.now() - date_obj
 
-    return delta.days
+    return str(delta.days)
 
 def points(app, need, needs, *args, **kwargs):
     
-    
+    categories = ['all', 'download', 'release']
+    category = args[0]
+    if category not in categories:
+        raise KeyError(f'points-category must be one of {", ".join(categories)}')
+
+
     release_points = 0
-    if need['release_days'] is not None and need['release_days'].isdigit():
-        release_days = int(need['release_days'])
+    if category == 'release' or category == 'all':
+        if need['release_days'] is not None and need['release_days'].isdigit():
+            release_days = int(need['release_days'])
+            
+            if release_days < 100:
+                release_points = 5
+            elif release_days < 200:
+                release_points = 4
+            elif release_days < 400:
+                release_points = 3
+            elif release_days < 600:
+                release_points = 2
+            else:
+                release_points = 0
         
-        if release_days < 100:
-            release_points = 5
-        elif release_days < 200:
-            release_points = 4
-        elif release_days < 400:
-            release_points = 3
-        elif release_days < 600:
-            release_points = 2
-        else:
-            release_points = 0
-    
 
     download_points = 0
-    if need['monthly'] is not None and need['monthly'].isdigit():
-        monthly = int(need['monthly']) 
-        if monthly > 50000:
-            download_points = 5
-        elif monthly > 5000:
-            download_points = 4
-        elif monthly > 1000:
-            download_points = 3
-        elif monthly > 500:
-            download_points = 2
-        elif monthly > 100:
-            download_points = 1
-        else:
-            download_points = 0
+    if category == 'download' or category == 'all':
+        if need['monthly'] is not None and need['monthly'].isdigit():
+            monthly = int(need['monthly']) 
+            if monthly > 50000:
+                download_points = 5
+            elif monthly > 5000:
+                download_points = 4
+            elif monthly > 1000:
+                download_points = 3
+            elif monthly > 500:
+                download_points = 2
+            elif monthly > 100:
+                download_points = 1
+            else:
+                download_points = 0
 
     points = release_points + download_points
-    return points
+    return str(points)
 
 def rstjinja(app, docname, source):
     """
