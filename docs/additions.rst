@@ -24,6 +24,10 @@ Specific Need objects
    :tags: needs
    :links: SPHINX-NEEDS
 
+.. needextend:: SPHINX-TEST-REPORTS
+   :tags: needs 
+   :links: SPHINX-NEEDS
+
 .. needextend:: SPHINX-MODELING
    :tags: needs
 

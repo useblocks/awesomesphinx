@@ -27,6 +27,7 @@ extensions = [
     'sphinx_needs',
     'sphinxcontrib.plantuml',
     'sphinx_immaterial',
+    'sphinx_design',
     ]
 
 templates_path = ['_templates']
@@ -41,7 +42,8 @@ html_theme = 'sphinx_immaterial'  # 'alabaster'
 html_static_path = ['_static']
 html_css_files = ['custom.css']
 html_context = {
-    'project_tags': PROJECT_TAGS
+    'project_tags': PROJECT_TAGS,
+    'need_ipmort_file':os.getenv('AWESOMESPHINX_NEEDS_FILE', '/../data/20221024_awesome.json')
 }
 
 #  NEED CONFIG

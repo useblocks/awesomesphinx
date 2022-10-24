@@ -9,9 +9,28 @@ extensions, themes and other Sphinx-related projects.
 
    This documentation project is in an early phase and could need some love, smart ideas and beautiful designs from you.
    So why not join us on our `GitHub project <https://github.com/useblocks/awesomesphinx>`_?
-   More details on our :ref:`contribute` page.
+   More details on the :ref:`contribute` page.
 
 *Documentation was built on:* |today|
+
+
+.. grid:: 2 
+    :outline:
+
+    .. grid-item-card:: Types
+
+       | :ref:`Extensions <extensions>`: :need_count:`sphinx_type == "extension"`
+       | :ref:`Themes <themes>`: :need_count:`sphinx_type == "theme"`
+       | :ref:`Other projects <others>`: :need_count:`sphinx_type == "other"`
+    
+       :ref:`Overall <overall>`: :need_count:`type == "sw"`  
+
+
+    .. grid-item-card:: Tags
+
+       {% for tag, desc in project_tags.items() %}
+       | :ref:`{{tag}} <tag_{{tag}}>`: :need_count:`"{{tag}}" in tags`
+       {% endfor %}
 
 
 Featured themes and extensions
@@ -21,6 +40,8 @@ Featured themes and extensions
    :filter: featured == "True"
    :layout: clean
 
+
+.. _overall:
 
 All Extensions & Themes
 -----------------------
@@ -47,10 +68,15 @@ Table of content
    categories/others
 
 .. toctree::
+   :caption: Tags    
+   :maxdepth: 2
+
+   tags
+
+.. toctree::
    :caption: Analysis    
    :maxdepth: 2
 
-   analysis/tags
    analysis/healthy
    analysis/famous
    analysis/active

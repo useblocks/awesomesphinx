@@ -32,7 +32,7 @@ IGNORE_PROJECTS = [
 # Is used to generate tag specific overviews.
 # Key is used for filtering, the value as documentation
 PROJECT_TAGS = {
-    'needs': 'All Sphinx-Needs related extensions and maybe themes.',
+    'needs': 'All `Sphinx-Needs <https://www.sphinx-needs.com/>`__ related extensions and maybe themes.',
     'image_processing': 'Extensions dealing with images and their presentation.',
     'layout':  'Extension which help to structure your dcument data e.g. by grids or dropdowns.',
     'pdf': 'Extensions which are dealing with PDFs.',
