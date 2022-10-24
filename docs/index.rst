@@ -85,5 +85,6 @@ Table of content
    :caption: Collaboration
    :maxdepth: 2
    
+   rating
    contribute 
    license

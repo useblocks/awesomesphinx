@@ -102,6 +102,19 @@ The values for ``points`` and ``release_days`` get calculated automatically.
    maintained by hand. It is much better to release the package on PyPi with the correct
    classifiers. 
 
+Adding tags
++++++++++++
+
+Tags are defined inside ``/projectspy``, inside the variable ``PROJECT_TAGS``.
+
+``PROJECT_TAGS`` is a dictionary, where the key the is tag name and the value is an rst-based description, which
+is taken for the documentation.
+
+Each tag inside ``PROJECT_TAGS`` gets reported automatically. No further actions are needed.
+
+If a new tag is needed, simply add it to ``PROJECT_TAGS``, use it for at least one Sphinx element, and create a PR.
+
+
 Developing docs
 ---------------
 
