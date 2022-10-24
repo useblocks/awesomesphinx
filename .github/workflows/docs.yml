@@ -52,6 +52,12 @@ jobs:
         run: |
           cd docs
           sphinx-build -a -E -b html . _build/html
+
+      - name: Archive docs
+        uses: actions/upload-artifact@v3
+        with:
+          name: awesomeSphinx docs
+          path: docs/_build/html
       
       # the following steps are only done after pushing to main or merging a PR
       # clone and set up the old gh-pages branch
