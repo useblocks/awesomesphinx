@@ -1,7 +1,7 @@
 Active
 ======
 
-.. needpie:: Days since last release_daysdata-v
+.. needpie:: Days since last release
    :labels: <100, 100-199, 200-399, 400-799, >=800
 
    int(release_days) < 100

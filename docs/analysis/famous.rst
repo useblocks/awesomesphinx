@@ -2,7 +2,7 @@ Famous
 ======
 
 .. needpie:: Monthly downloads
-   :labels: >50000,5000-49999, 1000-4999-,100-999,<100
+   :labels: >50000,5000-49999, 1000-4999,100-999,<100
 
    (int(monthly) if monthly.isdigit() else 0) >= 50000
    (int(monthly) if monthly.isdigit() else 0) < 50000 and (int(monthly) if monthly.isdigit() else 0) >= 5000
