@@ -34,8 +34,8 @@ Points for release days:
 Download rating
 ---------------
 
-The downloand numbers are taken from the BigQuery Table from PyPi.
-Is this is tored on the google cloud and querying >1TB per month costs money, these numbers get updated once a week.
+The download numbers are taken from the BigQuery Table from PyPi.
+The data is stored on Google cloud and querying >1TB per month costs money, these numbers get updated once a week.
 
 
 Points for monthly downloads:
