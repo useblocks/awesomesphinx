@@ -1,3 +1,5 @@
+.. _contribute:
+
 Contribute
 ==========
 
@@ -120,26 +122,26 @@ Technical background
 
 The AwesomeSphinx data workflow is as follows:
 
-1. ``/scripts/pypi_json.py`` gets executed
+1. ``/scripts/pypi_json.py`` gets executed (currently done manually).
 
-   1. Search for packages on PyPi by classifiers
-   2. Requests package info from PyPi for each package
-   3. Queries PyPi-BigQuery-data for download numbers of the last 30 days
-   4. Stores all data in a ``pypi_data.json`` files
+   1. Search for packages on PyPi by classifiers.
+   2. Requests package info from PyPi for each package.
+   3. Queries PyPi-BigQuery-data for download numbers of the last 30 days.
+   4. Stores all data in a ``pypi_data.json`` file.
 
-2. ``/scripts/needs_json.py`` gets executed
+2. ``/scripts/needs_json.py`` gets executed.
 
-   1. Loads ``pypi_data.json``
-   2. Extracts needed data only
-   3. Constructs need-objects internally
+   1. Loads ``pypi_data.json``.
+   2. Extracts needed data only.
+   3. Constructs need-objects internally.
    4. Creates an ``awesome.json``, which contains the need-objects and is compliant with the Sphinx-Needs ``needs.json`` format.
 
 
-3. Sphinx build gets started
+3. Sphinx build gets started.
 
-   1. ``needimport`` for ``awesome.json`` is used to import need-object for specific categories 
-   2. Jinja templates get rendered and inject data
-   3. Value calculation is done via the ``dynamic functions`` feature of Sphinx-Needs
+   1. ``needimport`` for ``awesome.json`` is used to import need-object for specific categories. 
+   2. Jinja templates get rendered and inject data.
+   3. Value calculation is done via the ``dynamic functions`` feature of Sphinx-Needs.
 
 
 Own Awesome X list

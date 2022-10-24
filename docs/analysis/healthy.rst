@@ -22,7 +22,7 @@ Points for release days:
      * 3 
    - * < 600
      * 2 
-   - * < 100
+   - * >= 600
      * 0 
 
 Points for monthly downloads:
@@ -31,13 +31,20 @@ Points for monthly downloads:
 
    - * Requirement
      * Points
-   - * > 50000
+   - * > 50.000
      * 5 
-   - * > 5000
+   - * > 5.000
      * 4 
-   - * > 1000
+   - * > 1.000
      * 3
-.. needbar:: Quality points
+   - * > 500
+     * 2
+   - * > 100
+     * 1
+   - * <= 100
+     * 0
+   
+.. needbar:: Health points
    :show_top_sum:
    :xlabels: 0,1,2,3,4,5,6,7,8,9,10
 
@@ -47,4 +54,4 @@ Projects with 9 points and higher.
 
 .. needtable::
    :filter: int(points) >= 9
-   :columns: id, title, sphinx_type as "Type", package_summary as "Summary", "points, download_points as "DL points", release_points as "Release points", code_nice as "Code Link", pypi_nice as "PyPi Link", website_nice as "Website Link"
+   :columns: id, title, sphinx_type as "Type", package_summary as "Summary", points, download_points as "DL points", release_points as "Release points", code_nice as "Code Link", pypi_nice as "PyPi Link", website_nice as "Website Link"

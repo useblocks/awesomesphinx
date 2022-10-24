@@ -5,8 +5,9 @@ An automatically collected and curated list of Sphinx extensions, themes and oth
 
 .. hint:: 
 
-   This documentation project is in an early phase and could need some love and smart ideas from additional developers.
-   So any help is welcome. Just visit our `GitHub project <https://github.com/useblocks/awesomesphinx>`_.
+   This documentation project is in an early phase and could need some love, smart ideas and beautiful designs from you.
+   So why not join us on our `GitHub project <https://github.com/useblocks/awesomesphinx>`_?
+   More details on our :ref:`contribute` page.
 
 
 Featured themes and extensions
