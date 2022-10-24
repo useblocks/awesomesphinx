@@ -2,9 +2,11 @@
 Creates a Sphinx-Needs compatilbe needs.json file from data collected by pypi_json.py script
 """
 
+from datetime import datetime
 import json
 import sys
 import os
+
 
 # Make Python aware of the awesom_config file
 sys.path.append(os.path.dirname(__file__))
@@ -109,12 +111,12 @@ for name, data in pypi_data.items():
 print()
 
 needs_data = {
-    "created": "2022-10-19T10:00:00.0",
+    "created": datetime.now().isoformat(),
     "current_version": "1.0",
     "project": "needs test docs",
     "versions": {
         "1.0": {
-            "created": "2022-10-19T10:00:00.0",
+            "created": datetime.now().isoformat(),
             "needs": needs
         }
     }

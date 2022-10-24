@@ -1,3 +1,4 @@
 sphinx-needs
 sphinxcontrib-plantuml
- google-cloud-bigquery
+google-cloud-bigquery
+git+https://github.com/jbms/sphinx-immaterial.git

@@ -1,7 +1,13 @@
 Awesome Sphinx
 ==============
 
-An automatically collected and curated list of Sphinx extensions, themes and other Sphinx related projects.
+An automatically collected and curated list of Sphinx extensions, themes and other Sphinx-related projects.
+
+.. hint:: 
+
+   This documentation project is in an early phase and could need some love and smart ideas from additional developers.
+   So any help is welcome. Just visit our `GitHub project <https://github.com/useblocks/awesomesphinx>`_.
+
 
 Featured themes and extensions
 ------------------------------
@@ -15,7 +21,7 @@ All Extensions & Themes
 -----------------------
 To search for data in all table columns, simply use the search field on the upper right of the table.
 
-Use the export buttons to get the current view as PDF or Excel file.
+Use the export buttons to get the current view as a PDF or Excel file.
 The export takes filter and sorting into account.
 
 .. needtable::

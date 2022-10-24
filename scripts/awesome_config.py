@@ -43,7 +43,7 @@ GROUP BY `project`
 # NEEDS_JSON.PY configs
 ##################################################
 #PYPI_FILE = 'pypi_data.json'
-PYPI_FILE = 'data/20221019_pypi_data.json'
+PYPI_FILE = 'data/20221024_pypi_data.json'
 
 NEED_FILE = 'awesome.json'
 
