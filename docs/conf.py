@@ -26,7 +26,7 @@ author = 'team useblockjs'
 extensions = [
     'sphinx_needs',
     'sphinxcontrib.plantuml',
-    'sphinx_immaterial',
+    # 'sphinx_immaterial',
     'sphinx_design',
     ]
 
@@ -38,7 +38,8 @@ exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store', '_awesome_templates']
 # -- Options for HTML output -------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#options-for-html-output
 
-html_theme = 'sphinx_immaterial'  # 'alabaster'
+# html_theme = 'sphinx_immaterial'  # 'alabaster'
+html_theme = 'alabaster'
 html_static_path = ['_static']
 html_css_files = ['custom.css']
 html_context = {
