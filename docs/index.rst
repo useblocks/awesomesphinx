@@ -1,13 +1,17 @@
 Awesome Sphinx
 ==============
 
-An automatically collected and curated list of Sphinx extensions, themes and other Sphinx-related projects.
+An automatically collected and manually curated list of 
+`Sphinx <https://www.sphinx-doc.org/en/master/>`__
+extensions, themes and other Sphinx-related projects.
 
 .. hint:: 
 
    This documentation project is in an early phase and could need some love, smart ideas and beautiful designs from you.
    So why not join us on our `GitHub project <https://github.com/useblocks/awesomesphinx>`_?
    More details on our :ref:`contribute` page.
+
+*Documentation was built on:* |today|
 
 
 Featured themes and extensions

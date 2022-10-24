@@ -17,7 +17,7 @@ sys.path.append(os.path.join(os.path.dirname(__file__), '..'))
 from projects import PROJECT_TAGS
 
 project = 'awesome-sphinx'
-copyright = '2022, team useblockjs'
+copyright = '2022, team useblocks'
 author = 'team useblockjs'
 
 # -- General configuration ---------------------------------------------------
