@@ -1,0 +1,122 @@
+# From: https://github.com/rkdarst/sphinx-actions-test/blob/master/.github/workflows/sphinx-build.yml
+
+name: Collect_Build
+on:
+  workflow_dispatch:
+    inputs:
+        amount:
+          description: 'Amount of projects to fetch. For production this should be 1000 or higher.'     
+          required: true
+          type: number
+          default: 3
+        deploy:
+          description: 'Docs shall be deployed'  
+          required: true 
+          type: boolean 
+          default: false
+  schedule:
+    # * is a special character in YAML so you have to quote this string
+    - cron:  '0 6 * * 1'  # Every Monday at 6
+
+env:
+  DEFAULT_BRANCH: "main"
+  SPHINXOPTS: "-W --keep-going -T"
+  # ^-- If these SPHINXOPTS are enabled, then be strict about the builds and fail on any warnings
+
+jobs:
+  build-and-deploy_docs:
+    name: Collect_and_Docs
+    runs-on: ubuntu-latest
+    permissions:
+      contents: 'read'
+      id-token: 'write'
+    env:
+      ON_CI: True
+      GH_KEY: ${{ secrets.GITHUB_TOKEN }}
+      AWESOMESPHINX_NEEDS_FILE: "/../awesome.json"
+      AWESOMESPHINX_AMOUNT: ${{ github.event.inputs.amount }}
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+      - name: Install Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.9'
+      - name: Install deps
+        run: |
+           pip install -r docs/requirements.txt
+           pip install -r scripts/requirements.txt
+      - name: Debugging information
+        run: |
+          echo "github.ref:" ${{github.ref}}
+          echo "github.event_name:" ${{github.event_name}}
+          echo "github.head_ref:" ${{github.head_ref}}
+          echo "github.base_ref:" ${{github.base_ref}}
+          set -x
+          git rev-parse --abbrev-ref HEAD
+          git branch
+          git branch -a
+          git remote -v
+          python -V
+          pip list --not-required
+          pip list
+          echo "ON_CI = $ON_CI"
+      # Google auth
+      - uses: 'google-github-actions/auth@v0'                             
+        with:
+          service_account: '${{secrets.SERVICE_ACCOUNT_EMAIL}}'
+          workload_identity_provider: 'projects/${{secrets.PROJECT_ID}}/locations/global/workloadIdentityPools/${{secrets.WI_POOL_NAME}}/providers/${{secrets.WI_PROVIDER_NAME}}'
+      # build
+      - name: Collect PyPI data
+        run: python scripts/pypi_json.py
+      - name: Collect GitHub data
+        run: python scripts/github_stats.py
+      - name: Create Sphinx-Needs file
+        run: python scripts/needs_json.py
+
+      - uses: ammaraskar/sphinx-problem-matcher@master
+      - name: Build Sphinx docs
+        run: |
+          cd docs
+          sphinx-build -a -E -b html . _build/html
+
+      - name: Archive docs
+        uses: actions/upload-artifact@v3
+        with:
+          name: awesomeSphinx docs
+          path: docs/_build/html
+      # the following steps are only done after pushing to main or merging a PR
+      # clone and set up the old gh-pages branch
+      - name: Clone old gh-pages
+        if: ${{ github.event_name == 'schedule' && github.ref_name == 'master' || github.event.inputs.deploy == true }}
+        run: |
+          set -x
+          git fetch
+          ( git branch gh-pages remotes/origin/gh-pages && git clone . --branch=gh-pages _gh-pages/ ) || mkdir _gh-pages
+          rm -rf _gh-pages/.git/
+          mkdir -p _gh-pages/
+      # if a push and default branch, copy build to _gh-pages/ as the "main"
+      # deployment.
+      - name: Copy docs build
+        if: ${{ github.event_name == 'schedule' && github.ref_name == 'master' || github.event.inputs.deploy == true }}
+        run: |
+          set -x
+          rsync -a docs/_build/html/ _gh-pages/
+
+      # add the .nojekyll file
+      - name: nojekyll
+        if: ${{ github.event_name == 'schedule' && github.ref_name == 'master' || github.event.inputs.deploy == true }}
+        run: |
+          touch _gh-pages/.nojekyll
+
+      # deploy
+      # https://github.com/peaceiris/actions-gh-pages
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v3
+        if: ${{ github.event_name == 'schedule' && github.ref_name == 'master' || github.event.inputs.deploy == true }}
+        with:
+          publish_branch: gh-pages
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: _gh-pages/
+          force_orphan: true

@@ -1,5 +1,4 @@
 git+https://github.com/useblocks/sphinx-needs/#egg=sphinx-needs
 sphinxcontrib.plantuml
-google-cloud-bigquery
 sphinx_design
 sphinx-immaterial

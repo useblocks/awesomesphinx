@@ -6,7 +6,6 @@ import json
 import xmlrpc.client
 import requests
 import time
-import pypistats
 import sys
 import os
 from threading import Thread

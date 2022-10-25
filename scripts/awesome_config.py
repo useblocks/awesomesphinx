@@ -29,7 +29,7 @@ JSON_FILE = 'pypi_data.json'
 
 # Used during development to reduce amount of data to fetch
 # Normally a search contains ~600 findings
-MAX_DATA = 5000
+MAX_DATA = int(os.environ.get('AWESOMESPHINX_AMOUNT', 3))
 
 API_SLEEP = 2  # Wait time for API, if too many requests were made
 
@@ -52,19 +52,22 @@ GROUP BY `project`
 """
 
 ##################################################
+# GITHUB_STATS.PY configs
+##################################################
+GH_JSON_FILE = 'pypi_gh_data.json'
+
+
+##################################################
 # NEEDS_JSON.PY configs
 ##################################################
-PYPI_FILE = 'pypi_gh_data.json'
+PYPI_FILE = JSON_FILE
 #PYPI_FILE = 'data/20221024_pypi_data.json'
 
 NEED_FILE = 'awesome.json'
 
 NEED_TYPE = 'sw'
 
-MAX_NEEDS = 5000  # User for  development for faster tests
+MAX_NEEDS = int(os.environ.get('AWESOMESPHINX_AMOUNT', 3))  # Used for development for faster tests
 
 
-##################################################
-# GITHUB_STATS.PY configs
-##################################################
-GH_JSON_FILE = 'pypi_gh_data.json'
+
