@@ -26,26 +26,72 @@ author = 'team useblockjs'
 extensions = [
     'sphinx_needs',
     'sphinxcontrib.plantuml',
-    # 'sphinx_immaterial',
-    'sphinx_design',
+    'sphinx_immaterial',
+    'sphinx_design'
     ]
 
 templates_path = ['_templates']
 exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store', '_awesome_templates']
 
-
-
 # -- Options for HTML output -------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#options-for-html-output
 
-# html_theme = 'sphinx_immaterial'  # 'alabaster'
-html_theme = 'alabaster'
+html_theme = 'sphinx_immaterial'  # 'alabaster'
+# html_theme = 'alabaster'
 html_static_path = ['_static']
 html_css_files = ['custom.css']
+html_js_files = ['custom.js']
 html_context = {
     'project_tags': PROJECT_TAGS,
-    'need_ipmort_file':os.getenv('AWESOMESPHINX_NEEDS_FILE', '/../data/20221024_awesome.json')
+    'need_ipmort_file': os.getenv('AWESOMESPHINX_NEEDS_FILE', '/../data/20221024_awesome.json')
 }
+
+html_theme_options = {
+    # "icon": {
+    #     "repo": "fontawesome/brands/github-square",
+    # },
+    "font": {
+        "code": "JetBrains Mono"
+    },
+    # "site_url": "https://sphinxcontrib-needs.readthedocs.io/",
+    # "repo_url": "https://github.com/useblocks/sphinxcontrib-needs/",
+    # "repo_name": "awesome-sphinx",
+    # "repo_type": "github",
+    # "edit_uri": "blob/main/docs",
+    # "google_analytics": ["UA-XXXXX", "auto"],
+    "globaltoc_collapse": True,
+    "features": [
+        # "navigation.sections",
+        "navigation.top",
+        "search.share",
+        "navigation.tracking",
+        "toc.follow"
+    ],
+    "palette": [
+        {
+            "media": "(prefers-color-scheme: light)",
+            "scheme": "default",
+            "primary": "blue",
+            "accent": "light-blue",
+            "toggle": {
+                "icon": "material/weather-night",
+                "name": "Switch to dark mode",
+            },
+        },
+        {
+            "media": "(prefers-color-scheme: dark)",
+            "scheme": "slate",
+            "primary": "blue",
+            "accent": "yellow",
+            "toggle": {
+                "icon": "material/weather-sunny",
+                "name": "Switch to light mode",
+            },
+        },
+    ],
+    "toc_title_is_page_title": True,
+}
+
 
 #  NEED CONFIG
 

@@ -13,24 +13,27 @@ extensions, themes and other Sphinx-related projects.
 
 *Documentation was built on:* |today|
 
+.. grid:: 2
+   :gutter: 2
 
-.. grid:: 2 
-    :outline:
+   .. grid-item-card:: Types
+      :columns: 6 6 6 6
+      :class-card: border
 
-    .. grid-item-card:: Types
-
-       | :ref:`Extensions <extensions>`: :need_count:`sphinx_type == "extension"`
-       | :ref:`Themes <themes>`: :need_count:`sphinx_type == "theme"`
-       | :ref:`Other projects <others>`: :need_count:`sphinx_type == "other"`
+      | :ref:`Extensions <extensions>`: :need_count:`sphinx_type == "extension"`
+      | :ref:`Themes <themes>`: :need_count:`sphinx_type == "theme"`
+      | :ref:`Other projects <others>`: :need_count:`sphinx_type == "other"`
     
-       :ref:`Overall <overall>`: :need_count:`type == "sw"`  
+      :ref:`Overall <overall>`: :need_count:`type == "sw"`
 
 
-    .. grid-item-card:: Tags
+   .. grid-item-card:: Tags
+      :columns: 6 6 6 6
+      :class-card: border
 
-       {% for tag, desc in project_tags.items() %}
-       | :ref:`{{tag}} <tag_{{tag}}>`: :need_count:`"{{tag}}" in tags`
-       {% endfor %}
+      {% for tag, desc in project_tags.items() %}
+      | :ref:`{{tag}} <tag_{{tag}}>`: :need_count:`"{{tag}}" in tags`
+      {% endfor %}
 
 
 Featured themes and extensions
@@ -52,7 +55,7 @@ The export takes filter and sorting into account.
 
 .. needtable::
    :columns: id, title as "Name", content as "Description", sphinx_type as "Type", license, points, monthly as "Monthly downloads", release_days as "Days since last release"
-   :colwidths: 10, 20, 35,10, 5, 5, 5, 10
+   :colwidths: 10, 20, 35, 10, 5, 5, 5, 10
    :style_row: awesome_[[copy('color')]]
 
 
