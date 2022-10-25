@@ -15,4 +15,4 @@ Projects with releases in the last 100 days
 .. needtable::
    :filter: int(release_days) <= 100
    :sort: release_days
-   :columns: id, title, sphinx_type, license, points, code_nice, pypi_nice, website_nice
+   :columns: id, title, sphinx_type, license, points, code_nice, PyPI_nice, website_nice

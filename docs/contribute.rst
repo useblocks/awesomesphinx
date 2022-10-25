@@ -31,14 +31,14 @@ It's mostly used to classify an extension or theme, to put it in specific catego
 
 Adding new package
 ~~~~~~~~~~~~~~~~~~
-Normally all extensions and themes get imported automatically from PiPy if they have set the correct
+Normally all extensions and themes get imported automatically from PyPI if they have set the correct
 classifiers in their packages.
 
-However, there are projects, which are not released on PYPI or haven't set the right classifiers. 
+However, there are projects, which are not released on PyPI or haven't set the right classifiers. 
 Therefore these packages need to be registered in awesomesphinx by hand.
 
 
-Register a package from PYPI
+Register a package from PyPI
 ++++++++++++++++++++++++++++
 
 Updating classifiers
@@ -56,8 +56,8 @@ The used classifiers for filtering are defined inside ``/projects.py`` file and 
 
 Not matching classifiers
 ************************
-If a package does not match the classifiers, which are used to search for packages on PyPi, it can be added
-by hand. However, it still must be available on PyPi!
+If a package does not match the classifiers, which are used to search for packages on PyPI, it can be added
+by hand. However, it still must be available on PyPI!
 
 Please open the file ``/projects.py`` and add the package-name to 
 the ``EXTRA_PROJECTS`` list.
@@ -70,8 +70,8 @@ the ``EXTRA_PROJECTS`` list.
     'doxysphinx'
    ] 
 
-Please be sure that the used name can be used to identify the package on PyPi, for instance by copying 
-the name from the PyPi URL of the package.
+Please be sure that the used name can be used to identify the package on PyPI, for instance by copying 
+the name from the PyPI URL of the package.
 
 Manually add a new package
 ++++++++++++++++++++++++++
@@ -89,7 +89,7 @@ the package.
        :release_date: 2022-09-24T21:26:03
        :release_name: 2.1.0
        :code: https://github.com/me/package
-       :pypi: https://pypi.org/package
+       :pypi: https://PyPI.org/package
        :website: https://my-new-package.com
 
 The values for ``points`` and ``release_days`` get calculated automatically.
@@ -99,7 +99,7 @@ The values for ``points`` and ``release_days`` get calculated automatically.
    Please be aware that this is the **worst** way of adding a new extension/theme.
 
    The values of ``release_date`` and ``monthly`` are not accurate and would need to be 
-   maintained by hand. It is much better to release the package on PyPi with the correct
+   maintained by hand. It is much better to release the package on PyPI with the correct
    classifiers. 
 
 Adding tags
@@ -120,10 +120,10 @@ Developing docs
 
 Run scripts
 ~~~~~~~~~~~
-The ``pypi_json.py`` script is using Google BigQuery to get information about the download numbers of PyPi.
+The ``PyPI_json.py`` script is using Google BigQuery to get information about the download numbers of PyPI.
 You need a google cloud account and an **authentication-file** to run these queries. 
 
-The installation guide of `pypinfo <https://github.com/ofek/pypinfo/blob/master/README.rst#installation>`_ has a great 
+The installation guide of `PyPInfo <https://github.com/ofek/pypinfo/blob/master/README.rst#installation>`_ has a great 
 chapter on how to get and configure a google cloud account.
 
 The **authentication-file** must be set via ENV variable.
@@ -135,11 +135,11 @@ Technical background
 
 The AwesomeSphinx data workflow is as follows:
 
-1. ``/scripts/pypi_json.py`` gets executed (currently done manually).
+1. ``/scripts/PyPI_json.py`` gets executed (currently done manually).
 
-   1. Search for packages on PyPi by classifiers.
-   2. Requests package info from PyPi for each package.
-   3. Queries PyPi-BigQuery-data for download numbers of the last 30 days.
+   1. Search for packages on PyPI by classifiers.
+   2. Requests package info from PyPI for each package.
+   3. Queries PyPI-BigQuery-data for download numbers of the last 30 days.
    4. Stores all data in a ``pypi_data.json`` file.
 
 2. ``/scripts/needs_json.py`` gets executed.
@@ -164,7 +164,7 @@ The used code and documentation configuration are not specific to Sphinx.
 With 1-2 line changes in the file ``/projects.py`` for the used classifiers filters, documentation projects can 
 be created for other Python-based projects.
 
-It must be currently Python-based, as the ``pypi_json.py`` script is using PyPi and BigQuery Table from PyPi to get needed data.
+It must be currently Python-based, as the ``pypi_json.py`` script is using PyPI and BigQuery Table from PyPI to get needed data.
 If this gets changed as well, also other tools can be documented as well.
 
 

@@ -12,4 +12,4 @@ Projects with 9 points and higher.
 
 .. needtable::
    :filter: int(points) >= 9
-   :columns: id, title, sphinx_type as "Type", package_summary as "Summary", points, download_points as "DL points", release_points as "Release points", code_nice as "Code Link", pypi_nice as "PyPi Link", website_nice as "Website Link"
+   :columns: id, title, sphinx_type as "Type", package_summary as "Summary", points, download_points as "DL points", release_points as "Release points", code_nice as "Code Link", PyPI_nice as "PyPI Link", website_nice as "Website Link"
