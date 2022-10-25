@@ -2,6 +2,6 @@
 
 | Links:
 {%- if website is not none and website != "" %} `Website <{{website}}>`__ {% endif %}
-{%- if pypi is not none and pypi != "" %} | `PyPi <{{pypi}}>`__ {% endif %}
+{%- if pypi is not none and pypi != "" %} | `PyPI <{{pypi}}>`__ {% endif %}
 {%- if code is not none and code != "" %} | `Code <{{code}}>`__ {% endif %}
 | Points: **{{points}}** ({{release_points}}+{{download_points}})
