@@ -25,15 +25,18 @@ EXTRA_PROJECTS = [
 # List of of projects, which have set one of the above classifiers, but shall be ignored.
 # Mostly because they are not reallyy related to Sphinx or just use Sphinx for documentation.
 IGNORE_PROJECTS = [
-
+    "ALVEOLUS"
 ]
 
-# Dict of allowed tags for a project.
+# Dict of tags to document.
 # Is used to generate tag specific overviews.
 # Key is used for filtering, the value as documentation
 PROJECT_TAGS = {
     'needs': 'All `Sphinx-Needs <https://www.sphinx-needs.com/>`__ related extensions and maybe themes.',
-    'image_processing': 'Extensions dealing with images and their presentation.',
-    'layout':  'Extension which help to structure your dcument data e.g. by grids or dropdowns.',
+    'layout':  'Extensions which help to structure your dcument data e.g. by grids or dropdowns.',
     'pdf': 'Extensions which are dealing with PDFs.',
+    'hacktoberfest': 'Projects, which are part of the `Hacktoberfest <https://hacktoberfest.com/>`__.',
+    'markdown': 'Extensions and tools, which support Markdown in Sphinx projects.',
+    'doxygen': 'Doxygen support inside Sphinx.',
+    'python': 'Support of the Python programming language',
 }

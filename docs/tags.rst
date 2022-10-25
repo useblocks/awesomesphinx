@@ -1,4 +1,4 @@
-{% for tag, desc in project_tags.items() %}
+{% for tag, desc in project_tags.items()|sort() %}
 .. _tag_{{tag}}:
 
 {{tag|capitalize}}

@@ -19,6 +19,9 @@ Specific Need objects
    :featured: True
    :tags: needs
 
+.. needextend:: DOXYSPHINX
+   :featured: True
+
 .. needextend:: SPHINXCONTRIB-NEEDS
    :deprecated: True   
    :tags: needs
@@ -32,9 +35,16 @@ Specific Need objects
    :tags: needs
 
 .. needextend:: SPHINX-SIMPLEPDF
-   :featured: True
    :sphinx_type: extension
    :tags: pdf
 
 .. needextend:: SPHINX-IMMATERIAL
    :featured: True
+
+
+.. needextend:: SPHINX_DESIGN
+   :+tags: layout
+
+
+	
+

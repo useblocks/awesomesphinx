@@ -71,7 +71,10 @@ for name, data in pypi_data.items():
         overall = 0
 
     try:
-        tags = data['awesome_stats']['tags']
+        tags = []
+        for tag in data['awesome_stats']['tags']:
+            if tag not in PROJECT_IGNORE_TAGS:
+                tags.append(tag)
     except KeyError:
         tags = []
 

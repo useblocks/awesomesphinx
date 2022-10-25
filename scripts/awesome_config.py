@@ -8,6 +8,18 @@ import os
 sys.path.append(os.path.join(os.path.dirname(__file__), '..'))
 from projects import PROJECT_FILTERS, EXTRA_PROJECTS, IGNORE_PROJECTS
 
+# A list of tags, which shall not be set, as they are too commonly used.
+PROJECT_IGNORE_TAGS = [
+    "sphinxcontrib",
+    "sphinx",
+    "documentation",
+    "sphinx-theme",
+    "sphinx-extension",
+    "theme",
+    "extension",
+    "documentation-tool",
+    "documentation-generator",
+]
 
 ##################################################
 # PYPI_JSON.PY configs

@@ -164,3 +164,6 @@ table.NEEDS_DATATABLES, table.NEEDS_TABLE{
     max-width: inherit;
     width: inherit;
 }
+div.md-grid {
+    max-width: 100rem !important;
+  }

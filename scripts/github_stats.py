@@ -12,7 +12,7 @@ sys.path.append(os.path.dirname(__file__))
 from awesome_config import *
 
 
-KEY = "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"
+KEY = os.environ['GH_KEY']
 
 
 def get_gh_topics(name, gh_project, results, counter):
@@ -33,8 +33,8 @@ def get_gh_topics(name, gh_project, results, counter):
 
 
 
-print(f'Reading pypi data from {PYPI_FILE}')
-with open(PYPI_FILE, 'r') as f:
+print(f'Reading pypi data from {JSON_FILE}')
+with open(JSON_FILE, 'r') as f:
     pypi_data = json.load(f)
 
 gh_projects={}
@@ -61,7 +61,7 @@ for name, project  in pypi_data.items():
     gh_urls_clean = []
     for url in gh_urls:
         if url is not None and 'github.com' in url and '/issues' not in url:
-            url_clean = url.replace('https://github.com/', '').strip('/')
+            url_clean = url.replace('https://github.com/', '').replace('https://github.com/', '').strip('/')
             gh_urls_clean.append(url_clean)
 
     if gh_urls_clean:
@@ -83,6 +83,10 @@ for name, project in pypi_data.items():
         threads[name].start()
         counter += 1
 
+for thre in threads.values():
+    thre.join()
+
+
 print(f'Received {len(results)} tag-results from GitHub')
 
 for name, project in pypi_data.items():
@@ -98,5 +102,3 @@ with open(GH_JSON_FILE, 'w') as f:
 
 print('Done. Exit now!')
 
-# for repo in g.get_user().get_repos():
-#     print(repo.name)

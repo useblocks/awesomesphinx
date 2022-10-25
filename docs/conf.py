@@ -16,7 +16,7 @@ from sphinx_needs.api import add_dynamic_function
 sys.path.append(os.path.join(os.path.dirname(__file__), '..'))
 from projects import PROJECT_TAGS
 
-project = 'awesome-sphinx'
+project = 'Awesome-Sphinx'
 copyright = '2022, team useblocks'
 author = 'team useblockjs'
 
@@ -43,7 +43,7 @@ html_css_files = ['custom.css']
 html_js_files = ['custom.js']
 html_context = {
     'project_tags': PROJECT_TAGS,
-    'need_ipmort_file': os.getenv('AWESOMESPHINX_NEEDS_FILE', '/../data/20221024_awesome.json')
+    'need_import_file': os.getenv('AWESOMESPHINX_NEEDS_FILE', '/../data/20221025_awesome.json')
 }
 
 html_theme_options = {
@@ -90,6 +90,7 @@ html_theme_options = {
         },
     ],
     "toc_title_is_page_title": True,
+    "toc_title": "Awesome Sphinx",
 }
 
 

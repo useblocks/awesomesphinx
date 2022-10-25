@@ -9,5 +9,5 @@ Instead make it configurable by variables, like sphinx_type.
 Data
 ----
 
-.. needimport:: {{need_ipmort_file}}
+.. needimport:: {{need_import_file}}
    :filter: sphinx_type == "{{sphinx_type}}"
