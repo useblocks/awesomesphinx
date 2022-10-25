@@ -15,6 +15,41 @@
                 "GOOGLE_APPLICATION_CREDENTIALS": "${workspaceFolder}/secrets/google_cloud.json"
             }
         },
+        {
+            "name": "1_pypi_json SHORT",
+            "type": "python",
+            "request": "launch",
+            "program": "scripts/pypi_json.py",
+            "console": "integratedTerminal",
+            "justMyCode": true,
+            "env": {
+                "GOOGLE_APPLICATION_CREDENTIALS": "${workspaceFolder}/secrets/google_cloud.json",
+                "AWESOMESPHINX_AMOUNT": "3",
+                "AWESOMESPHINX_DAYS": "1",
+            }
+        },
+        {
+            "name": "2_github_stats SHORT",
+            "type": "python",
+            "request": "launch",
+            "program": "scripts/github_stats.py",
+            "console": "integratedTerminal",
+            "justMyCode": true,
+            "env": {
+                "AWESOMESPHINX_AMOUNT": "3",
+            }
+        },
+        {
+            "name": "3_needs.json SHORT",
+            "type": "python",
+            "request": "launch",
+            "program": "scripts/needs_json.py",
+            "console": "integratedTerminal",
+            "justMyCode": true,
+            "env": {
+                "AWESOMESPHINX_AMOUNT": "3",
+            }
+        },
 
         {
             "name": "Sphinx build CLEAN",
@@ -23,7 +58,10 @@
             "program": "${workspaceFolder}/.venv/bin/sphinx-build",
             "args": ["-v", "-b", "html", ".", "_build/html", "-a", "-E"],
             "console": "integratedTerminal",
-            "cwd": "${workspaceFolder}/docs"
+            "cwd": "${workspaceFolder}/docs",
+            "env": {
+                "AWESOMESPHINX_NEEDS_FILE": "/../awesome.json",
+            }
          },
 
          {
@@ -33,7 +71,10 @@
             "program": "${workspaceFolder}/.venv/bin/sphinx-build",
             "args": ["-b", "html", ".", "_build/html"],
             "console": "integratedTerminal",
-            "cwd": "${workspaceFolder}/docs"
+            "cwd": "${workspaceFolder}/docs",
+            "env": {
+                "AWESOMESPHINX_NEEDS_FILE": "/../awesome.json",
+            }
          }
     ]
 }

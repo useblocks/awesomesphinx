@@ -46,10 +46,13 @@ FROM `bigquery-public-data.pypi.file_downloads`
 WHERE file.project in ('{}')
   -- Only query the last X days of history
   AND DATE(timestamp)
-    BETWEEN DATE_SUB(CURRENT_DATE(), INTERVAL 30 DAY)
+    BETWEEN DATE_SUB(CURRENT_DATE(), INTERVAL {} DAY)
     AND CURRENT_DATE()
 GROUP BY `project`
 """
+
+# Amount of days to fetch data from PyPI
+BIGQUERY_DAYS = int(os.environ.get('AWESOMESPHINX_DAYS', 30))
 
 ##################################################
 # GITHUB_STATS.PY configs
@@ -60,7 +63,7 @@ GH_JSON_FILE = 'pypi_gh_data.json'
 ##################################################
 # NEEDS_JSON.PY configs
 ##################################################
-PYPI_FILE = JSON_FILE
+PYPI_FILE = os.environ.get('AWESOMESPHINX_PYPI_FILE', JSON_FILE) 
 #PYPI_FILE = 'data/20221024_pypi_data.json'
 
 NEED_FILE = 'awesome.json'

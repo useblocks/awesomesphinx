@@ -59,37 +59,40 @@ jobs:
           name: awesomeSphinx docs
           path: docs/_build/html
       
+      # NO DEPLOYMENT FOR PUSHES
+      # DOCS GET DEPLOYED WEEKLY
+      
       # the following steps are only done after pushing to main or merging a PR
       # clone and set up the old gh-pages branch
-      - name: Clone old gh-pages
-        if: ${{ github.event_name == 'push' }}
-        run: |
-          set -x
-          git fetch
-          ( git branch gh-pages remotes/origin/gh-pages && git clone . --branch=gh-pages _gh-pages/ ) || mkdir _gh-pages
-          rm -rf _gh-pages/.git/
-          mkdir -p _gh-pages/
+      # - name: Clone old gh-pages
+      #   if: ${{ github.event_name == 'push' }}
+      #   run: |
+      #     set -x
+      #     git fetch
+      #     ( git branch gh-pages remotes/origin/gh-pages && git clone . --branch=gh-pages _gh-pages/ ) || mkdir _gh-pages
+      #     rm -rf _gh-pages/.git/
+      #     mkdir -p _gh-pages/
       # if a push and default branch, copy build to _gh-pages/ as the "main"
       # deployment.
-      - name: Copy docs build
-        if: ${{ github.event_name == 'push' }}
-        run: |
-          set -x
-          rsync -a docs/_build/html/ _gh-pages/
+      # - name: Copy docs build
+      #   if: ${{ github.event_name == 'push' }}
+      #   run: |
+      #     set -x
+      #     rsync -a docs/_build/html/ _gh-pages/
 
       # add the .nojekyll file
-      - name: nojekyll
-        if: ${{ github.event_name == 'push' }}
-        run: |
-          touch _gh-pages/.nojekyll
+      # - name: nojekyll
+      #   if: ${{ github.event_name == 'push' }}
+      #   run: |
+      #     touch _gh-pages/.nojekyll
 
       # deploy
       # https://github.com/peaceiris/actions-gh-pages
-      - name: Deploy
-        uses: peaceiris/actions-gh-pages@v3
-        if: ${{ github.event_name == 'push' }}
-        with:
-          publish_branch: gh-pages
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: _gh-pages/
-          force_orphan: true
+      # - name: Deploy
+      #   uses: peaceiris/actions-gh-pages@v3
+      #   if: ${{ github.event_name == 'push' }}
+      #   with:
+      #     publish_branch: gh-pages
+      #     github_token: ${{ secrets.GITHUB_TOKEN }}
+      #     publish_dir: _gh-pages/
+      #     force_orphan: true

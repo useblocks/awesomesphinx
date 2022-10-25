@@ -18,7 +18,7 @@ from awesome_config import *
 
 def get_dl_month(name, results, counter):
     client = bigquery.Client()
-    query_string = BIGQUERY_DL_MONTH.format(name)
+    query_string = BIGQUERY_DL_MONTH.format(name, BIGQUERY_DAYS)
     query_job = client.query(query_string)
     query_results = query_job.result()
     for row in query_results:
@@ -102,7 +102,7 @@ for thre in threads.values():
 tools_data = results
     
 # collect PyPi BigQuery downloads numbers
-print(f'Collecting PyPi BigQuery Stats for {len(tools_data)} tools')
+print(f'Collecting PyPi BigQuery Stats for {len(tools_data)} tools for {BIGQUERY_DAYS} days')
 
 threads = {}
 results = {}
@@ -128,7 +128,6 @@ for name, package in tools_data.items():
         package['awesome_stats'] = {
             'month': results[name],
         }
-        print(f'{name}: {results[name]:,}')
     except KeyError:
         package['awesome_stats'] = {
             'month': 0,

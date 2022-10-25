@@ -172,6 +172,8 @@ needs_global_options = {
 
 needs_variant_options = ["status"]  # Not needed, but workarund to avoid a bug and some warnings
 
+needs_needextend_strict = False
+
 def days_since_build(app, need, needs, *args, **kwargs):
     """
     Calculates the days from now to a given date, which is normally in the past.

@@ -12,7 +12,8 @@ Specific Need objects
 ---------------------
 
 
-.. needextend:: SUNPY-SPHINX-THEME
+.. needextend:: SUNPY-SPHINX-THEME2
+   :strict: False
    :sphinx_type: theme 
 
 .. needextend:: SPHINX-NEEDS
