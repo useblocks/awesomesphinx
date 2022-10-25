@@ -54,8 +54,8 @@ Use the export buttons to get the current view as a PDF or Excel file.
 The export takes filter and sorting into account.
 
 .. needtable::
-   :columns: id, title as "Name", content as "Description", sphinx_type as "Type", license, points, monthly as "Monthly downloads", release_days as "Days since last release"
-   :colwidths: 10, 20, 35, 10, 5, 5, 5, 10
+   :columns: id, title as "Name", content as "Description", sphinx_type as "Type", license, points, monthly as "Monthly downloads", release_days as "Days since last release", stars as "Stars"
+   :colwidths: 10, 20, 35,10, 5, 5, 5, 10, 5
    :style_row: awesome_[[copy('color')]]
 
 

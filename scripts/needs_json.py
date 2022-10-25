@@ -70,6 +70,16 @@ for name, data in pypi_data.items():
     except KeyError:
         overall = 0
 
+    try:
+        tags = data['awesome_stats']['tags']
+    except KeyError:
+        tags = []
+
+    try:
+        stars = data['awesome_stats']['stars']
+    except KeyError:
+        stars = 0
+
     # urls
     code = ""
     if data['info']['project_urls']:
@@ -98,8 +108,9 @@ for name, data in pypi_data.items():
         "sphinx_type": sphinx_type,
         "license": license,
         "monthly": monthly,
-        "overall": overall,
-        "tags": [],
+        # "overall": overall,  # currently not collected 
+        "tags": tags,
+        "stars": stars,
         "pypi": data['info']['package_url'],
         "code": code,
         "website": data['info']['home_page'],

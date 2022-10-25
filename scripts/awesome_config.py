@@ -42,11 +42,17 @@ GROUP BY `project`
 ##################################################
 # NEEDS_JSON.PY configs
 ##################################################
-#PYPI_FILE = 'pypi_data.json'
-PYPI_FILE = 'data/20221024_pypi_data.json'
+PYPI_FILE = 'pypi_gh_data.json'
+#PYPI_FILE = 'data/20221024_pypi_data.json'
 
 NEED_FILE = 'awesome.json'
 
 NEED_TYPE = 'sw'
 
 MAX_NEEDS = 5000  # User for  development for faster tests
+
+
+##################################################
+# GITHUB_STATS.PY configs
+##################################################
+GH_JSON_FILE = 'pypi_gh_data.json'

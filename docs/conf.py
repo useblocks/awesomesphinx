@@ -124,6 +124,7 @@ needs_extra_options = [
     'featured',
     'color',
     'deprecated',
+    'stars',
     ]
 
 
