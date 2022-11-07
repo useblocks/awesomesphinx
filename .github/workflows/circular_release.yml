@@ -28,7 +28,7 @@ jobs:
     name: Collect_and_Docs
     runs-on: ubuntu-latest
     permissions:
-      contents: 'write'
+      contents: write
       id-token: 'write'
     env:
       ON_CI: True
@@ -71,6 +71,7 @@ jobs:
       - name: Collect PyPI data
         run: python scripts/pypi_json.py
       - name: Collect GitHub data
+        id: gh_data_collect
         run: python scripts/github_stats.py
       - name: Create Sphinx-Needs file
         run: python scripts/needs_json.py
@@ -115,7 +116,7 @@ jobs:
       # https://github.com/peaceiris/actions-gh-pages
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
-        if: ${{ github.event_name == 'schedule' && github.ref_name == 'master' || github.event.inputs.deploy == 'true' }}
+        if: ${{ (github.event_name == 'schedule' && github.ref_name == 'master' || github.event.inputs.deploy == 'true') && steps.gh_data_collect.conclusion == 'success' }}
         with:
           publish_branch: gh-pages
           github_token: ${{ secrets.GITHUB_TOKEN }}
