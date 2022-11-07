@@ -64,9 +64,11 @@ BIGQUERY_DAYS = int(os.environ.get('AWESOMESPHINX_DAYS', 30))
 ##################################################
 GH_JSON_FILE = 'pypi_gh_data.json'
 
-GH_RATE_LIMIT_AMOUNT = 2
-GH_RATE_LIMIT_WAIT = 300 # in s
+GH_RATE_LIMIT_AMOUNT = 6
+GH_RATE_LIMIT_WAIT = 600 # in s
 
+GH_WAIT_COUNTER = 3  # Every x requests we make a break
+GH_WAIT_DURATION = 3  # in s
 
 ##################################################
 # NEEDS_JSON.PY configs

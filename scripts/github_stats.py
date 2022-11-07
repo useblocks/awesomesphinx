@@ -81,8 +81,14 @@ counter = 0
 results = {}
 threads = {}
 
+wait_counter = 0
+
 for name, project in pypi_data.items():
     
+    if wait_counter > GH_WAIT_COUNTER:
+        time.sleep(GH_WAIT_DURATION)
+        wait_counter = 0
+
     awesome_tags = []
     if name in gh_projects:
         gh_project = gh_projects[name]
