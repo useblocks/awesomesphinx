@@ -89,7 +89,7 @@ jobs:
       # the following steps are only done after pushing to main or merging a PR
       # clone and set up the old gh-pages branch
       - name: Clone old gh-pages
-        if: ${{ github.event_name == 'schedule' && github.ref_name == 'master' || github.event.inputs.deploy == true }}
+        if: ${{ github.event_name == 'schedule' && github.ref_name == 'master' || github.event.inputs.deploy == 'true' }}
         run: |
           set -x
           git fetch
@@ -99,14 +99,14 @@ jobs:
       # if a push and default branch, copy build to _gh-pages/ as the "main"
       # deployment.
       - name: Copy docs build
-        if: ${{ github.event_name == 'schedule' && github.ref_name == 'master' || github.event.inputs.deploy == true }}
+        if: ${{ github.event_name == 'schedule' && github.ref_name == 'master' || github.event.inputs.deploy == 'true' }}
         run: |
           set -x
           rsync -a docs/_build/html/ _gh-pages/
 
       # add the .nojekyll file
       - name: nojekyll
-        if: ${{ github.event_name == 'schedule' && github.ref_name == 'master' || github.event.inputs.deploy == true }}
+        if: ${{ github.event_name == 'schedule' && github.ref_name == 'master' || github.event.inputs.deploy == 'true' }}
         run: |
           touch _gh-pages/.nojekyll
 
@@ -114,7 +114,7 @@ jobs:
       # https://github.com/peaceiris/actions-gh-pages
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
-        if: ${{ github.event_name == 'schedule' && github.ref_name == 'master' || github.event.inputs.deploy == true }}
+        if: ${{ github.event_name == 'schedule' && github.ref_name == 'master' || github.event.inputs.deploy == 'true' }}
         with:
           publish_branch: gh-pages
           github_token: ${{ secrets.GITHUB_TOKEN }}

@@ -29,7 +29,12 @@ JSON_FILE = 'pypi_data.json'
 
 # Used during development to reduce amount of data to fetch
 # Normally a search contains ~600 findings
-MAX_DATA = int(os.environ.get('AWESOMESPHINX_AMOUNT', 3))
+MAX_DATA = os.environ.get('AWESOMESPHINX_AMOUNT', 3)
+
+if MAX_DATA == '' or MAX_DATA is None:
+  MAX_DATA == 3
+MAX_DATA = int(MAX_DATA)
+
 
 API_SLEEP = 2  # Wait time for API, if too many requests were made
 
@@ -58,6 +63,9 @@ BIGQUERY_DAYS = int(os.environ.get('AWESOMESPHINX_DAYS', 30))
 # GITHUB_STATS.PY configs
 ##################################################
 GH_JSON_FILE = 'pypi_gh_data.json'
+
+GH_RATE_LIMIT_AMOUNT = 2
+GH_RATE_LIMIT_WAIT = 300 # in s
 
 
 ##################################################

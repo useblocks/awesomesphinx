@@ -5,7 +5,8 @@ import json
 import sys
 import os
 from threading import Thread
-from github import Github, UnknownObjectException
+import time
+from github import Github, UnknownObjectException, RateLimitExceededException
 
 # Make Python aware of the awesom_config file
 sys.path.append(os.path.dirname(__file__))
@@ -15,7 +16,7 @@ from awesome_config import *
 KEY = os.environ['GH_KEY']
 
 
-def get_gh_topics(name, gh_project, results, counter):
+def get_gh_topics(name, gh_project, results, counter, rate_limits=0):
     awesome_tags = []
     awesome_stars = -1
     try:
@@ -25,6 +26,12 @@ def get_gh_topics(name, gh_project, results, counter):
         print(f'{counter}/{len(pypi_data)} {name}: Tags retrieved: {awesome_tags}')
     except UnknownObjectException:
         pass
+    except RateLimitExceededException:
+        if rate_limits < GH_RATE_LIMIT_AMOUNT:
+            print(f'{counter} waiting {GH_RATE_LIMIT_WAIT} ({rate_limits+1}/{GH_RATE_LIMIT_AMOUNT})')
+            time.sleep(GH_RATE_LIMIT_WAIT)
+            get_gh_topics(name, gh_project, results, counter, rate_limits=rate_limits+1)
+
 
     results[name] = {
         'tags': awesome_tags,
