@@ -71,7 +71,10 @@ GH_RATE_LIMIT_WAIT = 300 # in s
 ##################################################
 # NEEDS_JSON.PY configs
 ##################################################
-PYPI_FILE = os.environ.get('AWESOMESPHINX_PYPI_FILE', JSON_FILE) 
+PYPI_FILE = os.environ.get('AWESOMESPHINX_PYPI_FILE', GH_JSON_FILE) 
+if PYPI_FILE is '' or PYPI_FILE is None:
+  PYPI_FILE = GH_JSON_FILE
+
 #PYPI_FILE = 'data/20221024_pypi_data.json'
 
 NEED_FILE = 'awesome.json'
