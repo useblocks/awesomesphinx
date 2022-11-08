@@ -53,11 +53,11 @@ html_theme_options = {
     "font": {
         "code": "JetBrains Mono"
     },
-    # "site_url": "https://sphinxcontrib-needs.readthedocs.io/",
-    # "repo_url": "https://github.com/useblocks/sphinxcontrib-needs/",
-    # "repo_name": "awesome-sphinx",
-    # "repo_type": "github",
-    # "edit_uri": "blob/main/docs",
+    "site_url": "https://awesomesphinx.useblocks.com/",
+    "repo_url": "https://github.com/useblocks/awesomesphinx",
+    "repo_name": "Awesome-Sphinx",
+    "repo_type": "github",
+    "edit_uri": "blob/main/docs",
     # "google_analytics": ["UA-XXXXX", "auto"],
     "globaltoc_collapse": True,
     "features": [
@@ -90,7 +90,7 @@ html_theme_options = {
         },
     ],
     "toc_title_is_page_title": True,
-    "toc_title": "Awesome Sphinx",
+    "toc_title": "Awesome-Sphinx",
 }
 
 
