@@ -33,3 +33,10 @@ So the easiest way to get your extension on this list is by having the right
 meta-data in your package on PyPI.
 
 More details `here <https://awesomesphinx.useblocks.com/contribute.html#register-a-package-from-pypi>`__.
+
+
+ToDo
+----
+
+* Adding tutorials to the list
+* Better UX
