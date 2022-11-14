@@ -1,4 +1,3 @@
-git+https://github.com/useblocks/sphinx-needs@needextend_strict
-sphinxcontrib.plantuml
+git+https://github.com/useblocks/sphinx-needs
 sphinx_design
 sphinx-immaterial
