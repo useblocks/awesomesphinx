@@ -8,7 +8,7 @@ on:
           description: 'Amount of projects to fetch. For production this should be 1000 or higher.'     
           required: true
           type: number
-          default: 3
+          default: 1000
         deploy:
           description: 'Docs shall be deployed'  
           required: true 

@@ -33,7 +33,10 @@ MAX_DATA = os.environ.get('AWESOMESPHINX_AMOUNT', 3)
 
 if MAX_DATA == '' or MAX_DATA is None:
   MAX_DATA == 3
-MAX_DATA = int(MAX_DATA)
+try: 
+  MAX_DATA = int(MAX_DATA)
+except ValueError:
+  MAX_DATA = 3
 
 
 API_SLEEP = 2  # Wait time for API, if too many requests were made
