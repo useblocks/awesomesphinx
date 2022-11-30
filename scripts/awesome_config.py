@@ -86,7 +86,7 @@ NEED_FILE = 'awesome.json'
 
 NEED_TYPE = 'sw'
 
-MAX_NEEDS = int(os.environ.get('AWESOMESPHINX_AMOUNT', 3))  # Used for development for faster tests
+MAX_NEEDS = MAX_DATA # Used for development for faster tests
 
 
 
