@@ -4,11 +4,11 @@ name: Collect_Build
 on:
   workflow_dispatch:
     inputs:
-        amount:
-          description: 'Amount of projects to fetch. For production this should be 1000 or higher.'     
-          required: true
-          type: number
-          default: 1000
+        # amount:
+        #   description: 'Amount of projects to fetch. For production this should be 1000 or higher.'     
+        #   required: true
+        #   type: number
+        #   default: 1000
         deploy:
           description: 'Docs shall be deployed'  
           required: true 
@@ -34,7 +34,7 @@ jobs:
       ON_CI: True
       GH_KEY: ${{ secrets.GITHUB_TOKEN }}
       AWESOMESPHINX_NEEDS_FILE: "/../awesome.json"
-      AWESOMESPHINX_AMOUNT: ${{ github.event.inputs.amount }}
+      AWESOMESPHINX_AMOUNT: 1000
     steps:
       - uses: actions/checkout@v3
         with:

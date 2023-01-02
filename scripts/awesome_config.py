@@ -29,10 +29,12 @@ JSON_FILE = 'pypi_data.json'
 
 # Used during development to reduce amount of data to fetch
 # Normally a search contains ~600 findings
-MAX_DATA = os.environ.get('AWESOMESPHINX_AMOUNT', 3)
+MAX_DATA = os.environ.get('AWESOMESPHINX_AMOUNT', -1)
+if MAX_DATA == -1:
+  MAX_DATA = 1000
 
 if MAX_DATA == '' or MAX_DATA is None:
-  MAX_DATA == 3
+  MAX_DATA == 1000
 try: 
   MAX_DATA = int(MAX_DATA)
 except ValueError:
