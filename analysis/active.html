@@ -1,0 +1,1938 @@
+
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      <link rel="icon" href="">
+    
+    
+      
+        <title>Active - Awesome-Sphinx  documentation</title>
+      
+    
+    
+      
+        
+        
+      
+      
+
+    
+    
+    
+      
+        
+        
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"JetBrains Mono"}</style>
+      
+    
+        <link rel="stylesheet" type="text/css" href="../_static/google_fonts.css" />
+        <link rel="stylesheet" type="text/css" href="../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+        <link rel="stylesheet" type="text/css" href="../_static/assets/jsonview.bundle.css" />
+        <link rel="stylesheet" type="text/css" href="../_static/sphinx-needs/libs/html/datatables.min.css" />
+        <link rel="stylesheet" type="text/css" href="../_static/sphinx-needs/common.css" />
+        <link rel="stylesheet" type="text/css" href="../_static/sphinx-needs/styles.css" />
+        <link rel="stylesheet" type="text/css" href="../_static/sphinx-needs/modern.css" />
+        <link rel="stylesheet" type="text/css" href="../_static/sphinx-needs/layouts.css" />
+        <link rel="stylesheet" type="text/css" href="../_static/stylesheets/sphinx_immaterial_theme.7e770c658028b1997.min.css" />
+        <link rel="stylesheet" type="text/css" href="../_static/custom.css" />
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="light-blue">
+  
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../index.html" title="Awesome-Sphinx  documentation" class="md-header__button md-logo" aria-label="Awesome-Sphinx  documentation" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Awesome-Sphinx  documentation
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Active
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      <form class="md-header__option" data-md-component="palette">
+        
+          
+          
+          <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="light-blue"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+          
+            <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3 3.19.09m3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95 2.06.05m-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31Z"/></svg>
+            </label>
+          
+        
+          
+          
+          <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="blue" data-md-color-accent="yellow"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_2">
+          
+            <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5c-.84 0-1.65.15-2.39.42L12 2M3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29L3.34 7m.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14L3.36 17M20.65 7l-1.77 3.79a7.023 7.023 0 0 0-2.38-4.15l4.15.36m-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29L20.64 17M12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44L12 22Z"/></svg>
+            </label>
+          
+        
+      </form>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Share" aria-label="Share" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7 0-.24-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91 1.61 0 2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08Z"/></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/useblocks/awesomesphinx" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    Awesome-Sphinx
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../index.html" title="Awesome-Sphinx  documentation" class="md-nav__button md-logo" aria-label="Awesome-Sphinx  documentation" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+    </a>
+    Awesome-Sphinx  documentation
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/useblocks/awesomesphinx" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    Awesome-Sphinx
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_1" type="checkbox" id="__nav_1" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_1">
+          <span class="md-ellipsis">Packages</span>
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Packages" data-md-level="1">
+        <label class="md-nav__title" for="__nav_1">
+          <span class="md-nav__icon md-icon"></span>
+          <span class="md-ellipsis">Packages</span>
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../categories/extensions.html" class="md-nav__link">
+        <span class="md-ellipsis">Extensions</span>
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../categories/themes.html" class="md-nav__link">
+        <span class="md-ellipsis">Themes</span>
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../categories/others.html" class="md-nav__link">
+        <span class="md-ellipsis">Other projects</span>
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2">
+          <span class="md-ellipsis">Tags</span>
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Tags" data-md-level="1">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          <span class="md-ellipsis">Tags</span>
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tags.html" class="md-nav__link">
+        <span class="md-ellipsis">Doxygen</span>
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tags.html#hacktoberfest" class="md-nav__link">
+        <span class="md-ellipsis">Hacktoberfest</span>
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tags.html#layout" class="md-nav__link">
+        <span class="md-ellipsis">Layout</span>
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tags.html#markdown" class="md-nav__link">
+        <span class="md-ellipsis">Markdown</span>
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tags.html#needs" class="md-nav__link">
+        <span class="md-ellipsis">Needs</span>
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tags.html#pdf" class="md-nav__link">
+        <span class="md-ellipsis">Pdf</span>
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tags.html#python" class="md-nav__link">
+        <span class="md-ellipsis">Python</span>
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" checked>
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3">
+          <span class="md-ellipsis">Analysis</span>
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Analysis" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          <span class="md-ellipsis">Analysis</span>
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="healthy.html" class="md-nav__link">
+        <span class="md-ellipsis">Healthy</span>
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="famous.html" class="md-nav__link">
+        <span class="md-ellipsis">Famous</span>
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      <a href="#" class="md-nav__link md-nav__link--active">
+        <span class="md-ellipsis">Active</span>
+      </a>
+      
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4">
+          <span class="md-ellipsis">Collaboration</span>
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Collaboration" data-md-level="1">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          <span class="md-ellipsis">Collaboration</span>
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../rating.html" class="md-nav__link">
+        <span class="md-ellipsis">Rating</span>
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../contribute.html" class="md-nav__link">
+        <span class="md-ellipsis">Contribute</span>
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../license.html" class="md-nav__link">
+        <span class="md-ellipsis">License</span>
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset" role="main">
+                  
+
+
+  <a href="https://github.com/useblocks/awesomesphinx/blob/main/docs/analysis/active.rst" title="Edit this page" class="md-content__button md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"/></svg>
+  </a>
+
+<h1 id="active">Active<a class="headerlink" href="#active" title="Permalink to this heading">¶</a></h1>
+<img alt="../_images/need_pie_7b2e1.svg" id="needpie-analysis/active-0" src="../_images/need_pie_7b2e1.svg" /><p>Projects with releases in the last 100 days</p>
+<span id="needtable-analysis/active-0"></span><table class="NEEDS_DATATABLES rtd-exclude-wy-table no-sphinx-material-strip docutils data align-default" id="needtable-analysis/active-0-table_node">
+<colgroup>
+<col style="width: 10.0%" />
+<col style="width: 30.0%" />
+<col style="width: 10.0%" />
+<col style="width: 10.0%" />
+<col style="width: 10.0%" />
+<col style="width: 10.0%" />
+<col style="width: 10.0%" />
+<col style="width: 10.0%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>ID</p></th>
+<th class="head"><p>Title</p></th>
+<th class="head"><p>Sphinx Type</p></th>
+<th class="head"><p>License</p></th>
+<th class="head"><p>Points</p></th>
+<th class="head"><p>Code Nice</p></th>
+<th class="head"><p>Pypi Nice</p></th>
+<th class="head"><p>Website Nice</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="need row-even"><td class="needs_id"><p><a class="reference internal" href="../categories/extensions.html#SPHINX-CODEAUTOLINK">SPHINX-CODEAUTOLINK</a></p></td>
+<td class="needs_title"><p>sphinx-codeautolink</p></td>
+<td class="needs_sphinx_type"><p>extension</p></td>
+<td class="needs_license"><p>other</p></td>
+<td class="needs_points"><p>8</p></td>
+<td class="needs_code_nice"><p></p></td>
+<td class="needs_pypi_nice"><p><a class="reference external" href="https://pypi.org/project/sphinx-codeautolink/">Link</a></p></td>
+<td class="needs_website_nice"><p></p></td>
+</tr>
+<tr class="need row-odd"><td class="needs_id"><p><a class="reference internal" href="../categories/themes.html#SPHINX-ENOS-THEME">SPHINX-ENOS-THEME</a></p></td>
+<td class="needs_title"><p>sphinx-enos-theme</p></td>
+<td class="needs_sphinx_type"><p>theme</p></td>
+<td class="needs_license"><p>MIT</p></td>
+<td class="needs_points"><p>8</p></td>
+<td class="needs_code_nice"><p></p></td>
+<td class="needs_pypi_nice"><p><a class="reference external" href="https://pypi.org/project/sphinx-enos-theme/">Link</a></p></td>
+<td class="needs_website_nice"><p><a class="reference external" href="https://github.com/TRoam/sphinx_enos_theme/">Link</a></p></td>
+</tr>
+<tr class="need row-even"><td class="needs_id"><p><a class="reference internal" href="../categories/extensions.html#RUNESTONE">RUNESTONE</a></p></td>
+<td class="needs_title"><p>runestone</p></td>
+<td class="needs_sphinx_type"><p>extension</p></td>
+<td class="needs_license"><p>GPL3</p></td>
+<td class="needs_points"><p>9</p></td>
+<td class="needs_code_nice"><p><a class="reference external" href="https://github.com/RunestoneInteractive/RunestoneComponents">Link</a></p></td>
+<td class="needs_pypi_nice"><p><a class="reference external" href="https://pypi.org/project/runestone/">Link</a></p></td>
+<td class="needs_website_nice"><p><a class="reference external" href="https://github.com/RunestoneInteractive/RunestoneComponents">Link</a></p></td>
+</tr>
+<tr class="need row-odd"><td class="needs_id"><p><a class="reference internal" href="../categories/extensions.html#SPHINXCONTRIB.APPLEHELP">SPHINXCONTRIB.APPLEHELP</a></p></td>
+<td class="needs_title"><p>sphinxcontrib.applehelp</p></td>
+<td class="needs_sphinx_type"><p>extension</p></td>
+<td class="needs_license"><p>BSD</p></td>
+<td class="needs_points"><p>5</p></td>
+<td class="needs_code_nice"><p><a class="reference external" href="https://github.com/sphinx-doc/sphinxcontrib-applehelp">Link</a></p></td>
+<td class="needs_pypi_nice"><p><a class="reference external" href="https://pypi.org/project/sphinxcontrib.applehelp/">Link</a></p></td>
+<td class="needs_website_nice"><p></p></td>
+</tr>
+<tr class="need row-even"><td class="needs_id"><p><a class="reference internal" href="../categories/others.html#JARVIS-UI">JARVIS-UI</a></p></td>
+<td class="needs_title"><p>jarvis-ui</p></td>
+<td class="needs_sphinx_type"><p>other</p></td>
+<td class="needs_license"><p>MIT</p></td>
+<td class="needs_points"><p>8</p></td>
+<td class="needs_code_nice"><p></p></td>
+<td class="needs_pypi_nice"><p><a class="reference external" href="https://pypi.org/project/jarvis-ui/">Link</a></p></td>
+<td class="needs_website_nice"><p><a class="reference external" href="https://github.com/thevickypedia/Jarvis_UI">Link</a></p></td>
+</tr>
+<tr class="need row-odd"><td class="needs_id"><p><a class="reference internal" href="../categories/themes.html#SPHINX">SPHINX</a></p></td>
+<td class="needs_title"><p>Sphinx</p></td>
+<td class="needs_sphinx_type"><p>theme</p></td>
+<td class="needs_license"><p>BSD</p></td>
+<td class="needs_points"><p>5</p></td>
+<td class="needs_code_nice"><p><a class="reference external" href="https://github.com/sphinx-doc/sphinx">Link</a></p></td>
+<td class="needs_pypi_nice"><p><a class="reference external" href="https://pypi.org/project/Sphinx/">Link</a></p></td>
+<td class="needs_website_nice"><p></p></td>
+</tr>
+<tr class="need row-even"><td class="needs_id"><p><a class="reference internal" href="../categories/extensions.html#NBSPHINX">NBSPHINX</a></p></td>
+<td class="needs_title"><p>nbsphinx</p></td>
+<td class="needs_sphinx_type"><p>extension</p></td>
+<td class="needs_license"><p>MIT</p></td>
+<td class="needs_points"><p>10</p></td>
+<td class="needs_code_nice"><p></p></td>
+<td class="needs_pypi_nice"><p><a class="reference external" href="https://pypi.org/project/nbsphinx/">Link</a></p></td>
+<td class="needs_website_nice"><p><a class="reference external" href="https://nbsphinx.readthedocs.io/">Link</a></p></td>
+</tr>
+<tr class="need row-odd"><td class="needs_id"><p><a class="reference internal" href="../categories/themes.html#INSIPID-SPHINX-THEME">INSIPID-SPHINX-THEME</a></p></td>
+<td class="needs_title"><p>insipid-sphinx-theme</p></td>
+<td class="needs_sphinx_type"><p>theme</p></td>
+<td class="needs_license"><p>BSD</p></td>
+<td class="needs_points"><p>8</p></td>
+<td class="needs_code_nice"><p></p></td>
+<td class="needs_pypi_nice"><p><a class="reference external" href="https://pypi.org/project/insipid-sphinx-theme/">Link</a></p></td>
+<td class="needs_website_nice"><p><a class="reference external" href="https://insipid-sphinx-theme.readthedocs.io/">Link</a></p></td>
+</tr>
+<tr class="need row-even"><td class="needs_id"><p><a class="reference internal" href="../categories/extensions.html#MYST-NB">MYST-NB</a></p></td>
+<td class="needs_title"><p>myst-nb</p></td>
+<td class="needs_sphinx_type"><p>extension</p></td>
+<td class="needs_license"><p>MIT</p></td>
+<td class="needs_points"><p>9</p></td>
+<td class="needs_code_nice"><p></p></td>
+<td class="needs_pypi_nice"><p><a class="reference external" href="https://pypi.org/project/myst-nb/">Link</a></p></td>
+<td class="needs_website_nice"><p><a class="reference external" href="None">Link</a></p></td>
+</tr>
+<tr class="need row-odd"><td class="needs_id"><p><a class="reference internal" href="../categories/extensions.html#SPHINXCONTRIB-OEMBED">SPHINXCONTRIB-OEMBED</a></p></td>
+<td class="needs_title"><p>sphinxcontrib-oembed</p></td>
+<td class="needs_sphinx_type"><p>extension</p></td>
+<td class="needs_license"><p>Apache</p></td>
+<td class="needs_points"><p>4</p></td>
+<td class="needs_code_nice"><p></p></td>
+<td class="needs_pypi_nice"><p><a class="reference external" href="https://pypi.org/project/sphinxcontrib-oembed/">Link</a></p></td>
+<td class="needs_website_nice"><p></p></td>
+</tr>
+<tr class="need row-even"><td class="needs_id"><p><a class="reference internal" href="../categories/extensions.html#SPHINXCONTRIB-SASS">SPHINXCONTRIB-SASS</a></p></td>
+<td class="needs_title"><p>sphinxcontrib-sass</p></td>
+<td class="needs_sphinx_type"><p>extension</p></td>
+<td class="needs_license"><p>Apache</p></td>
+<td class="needs_points"><p>5</p></td>
+<td class="needs_code_nice"><p></p></td>
+<td class="needs_pypi_nice"><p><a class="reference external" href="https://pypi.org/project/sphinxcontrib-sass/">Link</a></p></td>
+<td class="needs_website_nice"><p></p></td>
+</tr>
+<tr class="need row-odd"><td class="needs_id"><p><a class="reference internal" href="../categories/extensions.html#JARACO.PACKAGING">JARACO.PACKAGING</a></p></td>
+<td class="needs_title"><p>jaraco.packaging</p></td>
+<td class="needs_sphinx_type"><p>extension</p></td>
+<td class="needs_license"><p>MIT</p></td>
+<td class="needs_points"><p>5</p></td>
+<td class="needs_code_nice"><p></p></td>
+<td class="needs_pypi_nice"><p><a class="reference external" href="https://pypi.org/project/jaraco.packaging/">Link</a></p></td>
+<td class="needs_website_nice"><p><a class="reference external" href="https://github.com/jaraco/jaraco.packaging">Link</a></p></td>
+</tr>
+<tr class="need row-even"><td class="needs_id"><p><a class="reference internal" href="../categories/extensions.html#SPHINX-SITEMAP">SPHINX-SITEMAP</a></p></td>
+<td class="needs_title"><p>sphinx-sitemap</p></td>
+<td class="needs_sphinx_type"><p>extension</p></td>
+<td class="needs_license"><p>MIT</p></td>
+<td class="needs_points"><p>10</p></td>
+<td class="needs_code_nice"><p></p></td>
+<td class="needs_pypi_nice"><p><a class="reference external" href="https://pypi.org/project/sphinx-sitemap/">Link</a></p></td>
+<td class="needs_website_nice"><p></p></td>
+</tr>
+<tr class="need row-odd"><td class="needs_id"><p><a class="reference internal" href="../categories/others.html#LOGIKAL-DOCS">LOGIKAL-DOCS</a></p></td>
+<td class="needs_title"><p>logikal-docs</p></td>
+<td class="needs_sphinx_type"><p>other</p></td>
+<td class="needs_license"><p>MIT</p></td>
+<td class="needs_points"><p>6</p></td>
+<td class="needs_code_nice"><p></p></td>
+<td class="needs_pypi_nice"><p><a class="reference external" href="https://pypi.org/project/logikal-docs/">Link</a></p></td>
+<td class="needs_website_nice"><p></p></td>
+</tr>
+<tr class="need row-even"><td class="needs_id"><p><a class="reference internal" href="../categories/others.html#MOFFRAGMENTOR">MOFFRAGMENTOR</a></p></td>
+<td class="needs_title"><p>moffragmentor</p></td>
+<td class="needs_sphinx_type"><p>other</p></td>
+<td class="needs_license"><p>MIT</p></td>
+<td class="needs_points"><p>7</p></td>
+<td class="needs_code_nice"><p></p></td>
+<td class="needs_pypi_nice"><p><a class="reference external" href="https://pypi.org/project/moffragmentor/">Link</a></p></td>
+<td class="needs_website_nice"><p><a class="reference external" href="https://github.com/kjappelbaum/moffragmentor">Link</a></p></td>
+</tr>
+<tr class="need row-odd"><td class="needs_id"><p><a class="reference internal" href="../categories/themes.html#PALLETS-SPHINX-THEMES">PALLETS-SPHINX-THEMES</a></p></td>
+<td class="needs_title"><p>Pallets-Sphinx-Themes</p></td>
+<td class="needs_sphinx_type"><p>theme</p></td>
+<td class="needs_license"><p>BSD</p></td>
+<td class="needs_points"><p>5</p></td>
+<td class="needs_code_nice"><p></p></td>
+<td class="needs_pypi_nice"><p><a class="reference external" href="https://pypi.org/project/Pallets-Sphinx-Themes/">Link</a></p></td>
+<td class="needs_website_nice"><p><a class="reference external" href="https://github.com/pallets/pallets-sphinx-themes/">Link</a></p></td>
+</tr>
+<tr class="need row-even"><td class="needs_id"><p><a class="reference internal" href="../categories/extensions.html#SPHINX-A4DOC">SPHINX-A4DOC</a></p></td>
+<td class="needs_title"><p>sphinx-a4doc</p></td>
+<td class="needs_sphinx_type"><p>extension</p></td>
+<td class="needs_license"><p>MIT</p></td>
+<td class="needs_points"><p>8</p></td>
+<td class="needs_code_nice"><p></p></td>
+<td class="needs_pypi_nice"><p><a class="reference external" href="https://pypi.org/project/sphinx-a4doc/">Link</a></p></td>
+<td class="needs_website_nice"><p><a class="reference external" href="https://github.com/taminomara/sphinx-a4doc">Link</a></p></td>
+</tr>
+<tr class="need row-odd"><td class="needs_id"><p><a class="reference internal" href="../categories/extensions.html#SPHINXCONTRIB-TOWNCRIER">SPHINXCONTRIB-TOWNCRIER</a></p></td>
+<td class="needs_title"><p>sphinxcontrib-towncrier</p></td>
+<td class="needs_sphinx_type"><p>extension</p></td>
+<td class="needs_license"><p>BSD</p></td>
+<td class="needs_points"><p>9</p></td>
+<td class="needs_code_nice"><p></p></td>
+<td class="needs_pypi_nice"><p><a class="reference external" href="https://pypi.org/project/sphinxcontrib-towncrier/">Link</a></p></td>
+<td class="needs_website_nice"><p><a class="reference external" href="https://github.com/sphinx-contrib/sphinxcontrib-towncrier">Link</a></p></td>
+</tr>
+<tr class="need row-even"><td class="needs_id"><p><a class="reference internal" href="../categories/others.html#RST-PYPI-REF">RST-PYPI-REF</a></p></td>
+<td class="needs_title"><p>rst-pypi-ref</p></td>
+<td class="needs_sphinx_type"><p>other</p></td>
+<td class="needs_license"><p>Apache</p></td>
+<td class="needs_points"><p>6</p></td>
+<td class="needs_code_nice"><p><a class="reference external" href="https://github.com/attakei-lab/rst-pypi-ref">Link</a></p></td>
+<td class="needs_pypi_nice"><p><a class="reference external" href="https://pypi.org/project/rst-pypi-ref/">Link</a></p></td>
+<td class="needs_website_nice"><p></p></td>
+</tr>
+<tr class="need row-odd"><td class="needs_id"><p><a class="reference internal" href="../categories/extensions.html#SPHINX-C-AUTODOC">SPHINX-C-AUTODOC</a></p></td>
+<td class="needs_title"><p>sphinx-c-autodoc</p></td>
+<td class="needs_sphinx_type"><p>extension</p></td>
+<td class="needs_license"><p>MIT</p></td>
+<td class="needs_points"><p>7</p></td>
+<td class="needs_code_nice"><p></p></td>
+<td class="needs_pypi_nice"><p><a class="reference external" href="https://pypi.org/project/sphinx-c-autodoc/">Link</a></p></td>
+<td class="needs_website_nice"><p><a class="reference external" href="https://sphinx-c-autodoc.readthedocs.io/en/latest/">Link</a></p></td>
+</tr>
+<tr class="need row-even"><td class="needs_id"><p><a class="reference internal" href="../categories/extensions.html#SPHINX-NEEDS">SPHINX-NEEDS</a></p></td>
+<td class="needs_title"><p>sphinx-needs</p></td>
+<td class="needs_sphinx_type"><p>extension</p></td>
+<td class="needs_license"><p>MIT</p></td>
+<td class="needs_points"><p>8</p></td>
+<td class="needs_code_nice"><p><a class="reference external" href="http://github.com/useblocks/sphinx-needs">Link</a></p></td>
+<td class="needs_pypi_nice"><p><a class="reference external" href="https://pypi.org/project/sphinx-needs/">Link</a></p></td>
+<td class="needs_website_nice"><p><a class="reference external" href="http://github.com/useblocks/sphinx-needs">Link</a></p></td>
+</tr>
+<tr class="need row-odd"><td class="needs_id"><p><a class="reference internal" href="../categories/extensions.html#SPHINX-TEST-REPORTS">SPHINX-TEST-REPORTS</a></p></td>
+<td class="needs_title"><p>sphinx-test-reports</p></td>
+<td class="needs_sphinx_type"><p>extension</p></td>
+<td class="needs_license"><p>MIT</p></td>
+<td class="needs_points"><p>8</p></td>
+<td class="needs_code_nice"><p></p></td>
+<td class="needs_pypi_nice"><p><a class="reference external" href="https://pypi.org/project/sphinx-test-reports/">Link</a></p></td>
+<td class="needs_website_nice"><p><a class="reference external" href="http://github.com/useblocks/sphinx-test-reports">Link</a></p></td>
+</tr>
+<tr class="need row-even"><td class="needs_id"><p><a class="reference internal" href="../categories/extensions.html#SPHINX-AUTODOC-TYPEHINTS">SPHINX-AUTODOC-TYPEHINTS</a></p></td>
+<td class="needs_title"><p>sphinx-autodoc-typehints</p></td>
+<td class="needs_sphinx_type"><p>extension</p></td>
+<td class="needs_license"><p>MIT</p></td>
+<td class="needs_points"><p>10</p></td>
+<td class="needs_code_nice"><p></p></td>
+<td class="needs_pypi_nice"><p><a class="reference external" href="https://pypi.org/project/sphinx-autodoc-typehints/">Link</a></p></td>
+<td class="needs_website_nice"><p></p></td>
+</tr>
+<tr class="need row-odd"><td class="needs_id"><p><a class="reference internal" href="../categories/themes.html#SPHINX-REVEALJS">SPHINX-REVEALJS</a></p></td>
+<td class="needs_title"><p>sphinx-revealjs</p></td>
+<td class="needs_sphinx_type"><p>theme</p></td>
+<td class="needs_license"><p>Apache</p></td>
+<td class="needs_points"><p>8</p></td>
+<td class="needs_code_nice"><p><a class="reference external" href="https://github.com/attakei/sphinx-revealjs">Link</a></p></td>
+<td class="needs_pypi_nice"><p><a class="reference external" href="https://pypi.org/project/sphinx-revealjs/">Link</a></p></td>
+<td class="needs_website_nice"><p></p></td>
+</tr>
+<tr class="need row-even"><td class="needs_id"><p><a class="reference internal" href="../categories/extensions.html#PYTHON-DISPATCH-SPHINX">PYTHON-DISPATCH-SPHINX</a></p></td>
+<td class="needs_title"><p>python-dispatch-sphinx</p></td>
+<td class="needs_sphinx_type"><p>extension</p></td>
+<td class="needs_license"><p>MIT</p></td>
+<td class="needs_points"><p>6</p></td>
+<td class="needs_code_nice"><p></p></td>
+<td class="needs_pypi_nice"><p><a class="reference external" href="https://pypi.org/project/python-dispatch-sphinx/">Link</a></p></td>
+<td class="needs_website_nice"><p><a class="reference external" href="https://github.com/nocarryr/python-dispatch">Link</a></p></td>
+</tr>
+<tr class="need row-odd"><td class="needs_id"><p><a class="reference internal" href="../categories/extensions.html#SPHINX-JSON-SCHEMA-SPEC">SPHINX-JSON-SCHEMA-SPEC</a></p></td>
+<td class="needs_title"><p>sphinx-json-schema-spec</p></td>
+<td class="needs_sphinx_type"><p>extension</p></td>
+<td class="needs_license"><p>MIT</p></td>
+<td class="needs_points"><p>8</p></td>
+<td class="needs_code_nice"><p></p></td>
+<td class="needs_pypi_nice"><p><a class="reference external" href="https://pypi.org/project/sphinx-json-schema-spec/">Link</a></p></td>
+<td class="needs_website_nice"><p></p></td>
+</tr>
+<tr class="need row-even"><td class="needs_id"><p><a class="reference internal" href="../categories/others.html#ELEMENT-CODER">ELEMENT-CODER</a></p></td>
+<td class="needs_title"><p>element-coder</p></td>
+<td class="needs_sphinx_type"><p>other</p></td>
+<td class="needs_license"><p>MIT</p></td>
+<td class="needs_points"><p>7</p></td>
+<td class="needs_code_nice"><p></p></td>
+<td class="needs_pypi_nice"><p><a class="reference external" href="https://pypi.org/project/element-coder/">Link</a></p></td>
+<td class="needs_website_nice"><p><a class="reference external" href="https://github.com/kjappelbaum/element-coder">Link</a></p></td>
+</tr>
+<tr class="need row-odd"><td class="needs_id"><p><a class="reference internal" href="../categories/others.html#MOFDSCRIBE">MOFDSCRIBE</a></p></td>
+<td class="needs_title"><p>mofdscribe</p></td>
+<td class="needs_sphinx_type"><p>other</p></td>
+<td class="needs_license"><p>MIT</p></td>
+<td class="needs_points"><p>8</p></td>
+<td class="needs_code_nice"><p></p></td>
+<td class="needs_pypi_nice"><p><a class="reference external" href="https://pypi.org/project/mofdscribe/">Link</a></p></td>
+<td class="needs_website_nice"><p><a class="reference external" href="https://github.com/kjappelbaum/mofdscribe">Link</a></p></td>
+</tr>
+<tr class="need row-even"><td class="needs_id"><p><a class="reference internal" href="../categories/extensions.html#METAPENSIERO.SPHINX.AUTODOC-SA">METAPENSIERO.SPHINX.AUTODOC-SA</a></p></td>
+<td class="needs_title"><p>metapensiero.sphinx.autodoc-sa</p></td>
+<td class="needs_sphinx_type"><p>extension</p></td>
+<td class="needs_license"><p>GPL3</p></td>
+<td class="needs_points"><p>5</p></td>
+<td class="needs_code_nice"><p></p></td>
+<td class="needs_pypi_nice"><p><a class="reference external" href="https://pypi.org/project/metapensiero.sphinx.autodoc-sa/">Link</a></p></td>
+<td class="needs_website_nice"><p><a class="reference external" href="https://bitbucket.org/lele/metapensiero.sphinx.autodoc_sa">Link</a></p></td>
+</tr>
+<tr class="need row-odd"><td class="needs_id"><p><a class="reference internal" href="../categories/extensions.html#SPHINX-LFS-CONTENT">SPHINX-LFS-CONTENT</a></p></td>
+<td class="needs_title"><p>sphinx-lfs-content</p></td>
+<td class="needs_sphinx_type"><p>extension</p></td>
+<td class="needs_license"><p>MIT</p></td>
+<td class="needs_points"><p>8</p></td>
+<td class="needs_code_nice"><p></p></td>
+<td class="needs_pypi_nice"><p><a class="reference external" href="https://pypi.org/project/sphinx-lfs-content/">Link</a></p></td>
+<td class="needs_website_nice"><p></p></td>
+</tr>
+<tr class="need row-even"><td class="needs_id"><p><a class="reference internal" href="../categories/themes.html#F5-SPHINX-THEME">F5-SPHINX-THEME</a></p></td>
+<td class="needs_title"><p>f5-sphinx-theme</p></td>
+<td class="needs_sphinx_type"><p>theme</p></td>
+<td class="needs_license"><p>Apache</p></td>
+<td class="needs_points"><p>8</p></td>
+<td class="needs_code_nice"><p></p></td>
+<td class="needs_pypi_nice"><p><a class="reference external" href="https://pypi.org/project/f5-sphinx-theme/">Link</a></p></td>
+<td class="needs_website_nice"><p><a class="reference external" href="https://github.com/F5DevCentral/f5-sphinx-theme">Link</a></p></td>
+</tr>
+<tr class="need row-odd"><td class="needs_id"><p><a class="reference internal" href="../categories/others.html#MOFCHECKER">MOFCHECKER</a></p></td>
+<td class="needs_title"><p>mofchecker</p></td>
+<td class="needs_sphinx_type"><p>other</p></td>
+<td class="needs_license"><p>MIT</p></td>
+<td class="needs_points"><p>7</p></td>
+<td class="needs_code_nice"><p></p></td>
+<td class="needs_pypi_nice"><p><a class="reference external" href="https://pypi.org/project/mofchecker/">Link</a></p></td>
+<td class="needs_website_nice"><p><a class="reference external" href="https://github.com/kjappelbaum/mofchecker">Link</a></p></td>
+</tr>
+<tr class="need row-even"><td class="needs_id"><p><a class="reference internal" href="../categories/others.html#UNITTEST-TEMPLATES">UNITTEST-TEMPLATES</a></p></td>
+<td class="needs_title"><p>unittest-templates</p></td>
+<td class="needs_sphinx_type"><p>other</p></td>
+<td class="needs_license"><p>MIT</p></td>
+<td class="needs_points"><p>7</p></td>
+<td class="needs_code_nice"><p></p></td>
+<td class="needs_pypi_nice"><p><a class="reference external" href="https://pypi.org/project/unittest-templates/">Link</a></p></td>
+<td class="needs_website_nice"><p><a class="reference external" href="https://github.com/cthoyt/unittest-templates">Link</a></p></td>
+</tr>
+<tr class="need row-odd"><td class="needs_id"><p><a class="reference internal" href="../categories/themes.html#NAPARI-SPHINX-THEME">NAPARI-SPHINX-THEME</a></p></td>
+<td class="needs_title"><p>napari-sphinx-theme</p></td>
+<td class="needs_sphinx_type"><p>theme</p></td>
+<td class="needs_license"><p>BSD</p></td>
+<td class="needs_points"><p>7</p></td>
+<td class="needs_code_nice"><p></p></td>
+<td class="needs_pypi_nice"><p><a class="reference external" href="https://pypi.org/project/napari-sphinx-theme/">Link</a></p></td>
+<td class="needs_website_nice"><p></p></td>
+</tr>
+<tr class="need row-even"><td class="needs_id"><p><a class="reference internal" href="../categories/extensions.html#HAWKMOTH">HAWKMOTH</a></p></td>
+<td class="needs_title"><p>hawkmoth</p></td>
+<td class="needs_sphinx_type"><p>extension</p></td>
+<td class="needs_license"><p>BSD</p></td>
+<td class="needs_points"><p>7</p></td>
+<td class="needs_code_nice"><p></p></td>
+<td class="needs_pypi_nice"><p><a class="reference external" href="https://pypi.org/project/hawkmoth/">Link</a></p></td>
+<td class="needs_website_nice"><p><a class="reference external" href="https://github.com/jnikula/hawkmoth">Link</a></p></td>
+</tr>
+<tr class="need row-odd"><td class="needs_id"><p><a class="reference internal" href="../categories/extensions.html#SPHINX-GRAPH">SPHINX-GRAPH</a></p></td>
+<td class="needs_title"><p>sphinx-graph</p></td>
+<td class="needs_sphinx_type"><p>extension</p></td>
+<td class="needs_license"><p>MIT</p></td>
+<td class="needs_points"><p>6</p></td>
+<td class="needs_code_nice"><p></p></td>
+<td class="needs_pypi_nice"><p><a class="reference external" href="https://pypi.org/project/sphinx-graph/">Link</a></p></td>
+<td class="needs_website_nice"><p><a class="reference external" href="https://github.com/danieleades/sphinx-graph">Link</a></p></td>
+</tr>
+<tr class="need row-even"><td class="needs_id"><p><a class="reference internal" href="../categories/others.html#INSEQ">INSEQ</a></p></td>
+<td class="needs_title"><p>inseq</p></td>
+<td class="needs_sphinx_type"><p>other</p></td>
+<td class="needs_license"><p>Apache</p></td>
+<td class="needs_points"><p>7</p></td>
+<td class="needs_code_nice"><p><a class="reference external" href="https://github.com/inseq-team/inseq">Link</a></p></td>
+<td class="needs_pypi_nice"><p><a class="reference external" href="https://pypi.org/project/inseq/">Link</a></p></td>
+<td class="needs_website_nice"><p><a class="reference external" href="https://github.com/inseq-team/inseq">Link</a></p></td>
+</tr>
+<tr class="need row-odd"><td class="needs_id"><p><a class="reference internal" href="../categories/extensions.html#SPHINX-MODELING">SPHINX-MODELING</a></p></td>
+<td class="needs_title"><p>sphinx-modeling</p></td>
+<td class="needs_sphinx_type"><p>extension</p></td>
+<td class="needs_license"><p>MIT</p></td>
+<td class="needs_points"><p>6</p></td>
+<td class="needs_code_nice"><p><a class="reference external" href="http://github.com/useblocks/sphinx-modeling">Link</a></p></td>
+<td class="needs_pypi_nice"><p><a class="reference external" href="https://pypi.org/project/sphinx-modeling/">Link</a></p></td>
+<td class="needs_website_nice"><p><a class="reference external" href="http://github.com/useblocks/sphinx-modeling">Link</a></p></td>
+</tr>
+<tr class="need row-even"><td class="needs_id"><p><a class="reference internal" href="../categories/others.html#OPENAV">OPENAV</a></p></td>
+<td class="needs_title"><p>openav</p></td>
+<td class="needs_sphinx_type"><p>other</p></td>
+<td class="needs_license"><p>MIT</p></td>
+<td class="needs_points"><p>6</p></td>
+<td class="needs_code_nice"><p></p></td>
+<td class="needs_pypi_nice"><p><a class="reference external" href="https://pypi.org/project/openav/">Link</a></p></td>
+<td class="needs_website_nice"><p><a class="reference external" href="https://github.com/DmitryRyumin/openav">Link</a></p></td>
+</tr>
+<tr class="need row-odd"><td class="needs_id"><p><a class="reference internal" href="../categories/themes.html#OWCUSTOM-SPHINX-THEME">OWCUSTOM-SPHINX-THEME</a></p></td>
+<td class="needs_title"><p>owcustom-sphinx-theme</p></td>
+<td class="needs_sphinx_type"><p>theme</p></td>
+<td class="needs_license"><p>MIT</p></td>
+<td class="needs_points"><p>6</p></td>
+<td class="needs_code_nice"><p></p></td>
+<td class="needs_pypi_nice"><p><a class="reference external" href="https://pypi.org/project/owcustom-sphinx-theme/">Link</a></p></td>
+<td class="needs_website_nice"><p></p></td>
+</tr>
+<tr class="need row-even"><td class="needs_id"><p><a class="reference internal" href="../categories/others.html#FAIRSHARING-CLIENT">FAIRSHARING-CLIENT</a></p></td>
+<td class="needs_title"><p>fairsharing-client</p></td>
+<td class="needs_sphinx_type"><p>other</p></td>
+<td class="needs_license"><p>MIT</p></td>
+<td class="needs_points"><p>8</p></td>
+<td class="needs_code_nice"><p></p></td>
+<td class="needs_pypi_nice"><p><a class="reference external" href="https://pypi.org/project/fairsharing-client/">Link</a></p></td>
+<td class="needs_website_nice"><p><a class="reference external" href="https://github.com/cthoyt/fairsharing-client">Link</a></p></td>
+</tr>
+<tr class="need row-odd"><td class="needs_id"><p><a class="reference internal" href="../categories/extensions.html#ATELIER">ATELIER</a></p></td>
+<td class="needs_title"><p>atelier</p></td>
+<td class="needs_sphinx_type"><p>extension</p></td>
+<td class="needs_license"><p>other</p></td>
+<td class="needs_points"><p>8</p></td>
+<td class="needs_code_nice"><p></p></td>
+<td class="needs_pypi_nice"><p><a class="reference external" href="https://pypi.org/project/atelier/">Link</a></p></td>
+<td class="needs_website_nice"><p><a class="reference external" href="https://gitlab.com/lino-framework/atelier">Link</a></p></td>
+</tr>
+<tr class="need row-even"><td class="needs_id"><p><a class="reference internal" href="../categories/extensions.html#SPHINX-ARGPARSE-CLI">SPHINX-ARGPARSE-CLI</a></p></td>
+<td class="needs_title"><p>sphinx-argparse-cli</p></td>
+<td class="needs_sphinx_type"><p>extension</p></td>
+<td class="needs_license"><p>MIT</p></td>
+<td class="needs_points"><p>9</p></td>
+<td class="needs_code_nice"><p></p></td>
+<td class="needs_pypi_nice"><p><a class="reference external" href="https://pypi.org/project/sphinx-argparse-cli/">Link</a></p></td>
+<td class="needs_website_nice"><p></p></td>
+</tr>
+<tr class="need row-odd"><td class="needs_id"><p><a class="reference internal" href="../categories/extensions.html#SPHINX-THEBE">SPHINX-THEBE</a></p></td>
+<td class="needs_title"><p>sphinx-thebe</p></td>
+<td class="needs_sphinx_type"><p>extension</p></td>
+<td class="needs_license"><p>BSD</p></td>
+<td class="needs_points"><p>10</p></td>
+<td class="needs_code_nice"><p></p></td>
+<td class="needs_pypi_nice"><p><a class="reference external" href="https://pypi.org/project/sphinx-thebe/">Link</a></p></td>
+<td class="needs_website_nice"><p><a class="reference external" href="https://github.com/executablebooks/sphinx-thebe">Link</a></p></td>
+</tr>
+<tr class="need row-even"><td class="needs_id"><p><a class="reference internal" href="../categories/extensions.html#SPHINXCONTRIB-CADQUERY">SPHINXCONTRIB-CADQUERY</a></p></td>
+<td class="needs_title"><p>sphinxcontrib-cadquery</p></td>
+<td class="needs_sphinx_type"><p>extension</p></td>
+<td class="needs_license"><p>Apache</p></td>
+<td class="needs_points"><p>6</p></td>
+<td class="needs_code_nice"><p><a class="reference external" href="https://github.com/sethfischer/sphinxcontrib-cadquery.git">Link</a></p></td>
+<td class="needs_pypi_nice"><p><a class="reference external" href="https://pypi.org/project/sphinxcontrib-cadquery/">Link</a></p></td>
+<td class="needs_website_nice"><p><a class="reference external" href="https://github.com/sethfischer/sphinxcontrib-cadquery">Link</a></p></td>
+</tr>
+<tr class="need row-odd"><td class="needs_id"><p><a class="reference internal" href="../categories/others.html#JARVIS-IRONMAN">JARVIS-IRONMAN</a></p></td>
+<td class="needs_title"><p>jarvis-ironman</p></td>
+<td class="needs_sphinx_type"><p>other</p></td>
+<td class="needs_license"><p>MIT</p></td>
+<td class="needs_points"><p>9</p></td>
+<td class="needs_code_nice"><p></p></td>
+<td class="needs_pypi_nice"><p><a class="reference external" href="https://pypi.org/project/jarvis-ironman/">Link</a></p></td>
+<td class="needs_website_nice"><p><a class="reference external" href="https://github.com/thevickypedia/Jarvis">Link</a></p></td>
+</tr>
+<tr class="need row-even"><td class="needs_id"><p><a class="reference internal" href="../categories/themes.html#SPHINX-BOOK-THEME">SPHINX-BOOK-THEME</a></p></td>
+<td class="needs_title"><p>sphinx-book-theme</p></td>
+<td class="needs_sphinx_type"><p>theme</p></td>
+<td class="needs_license"><p>BSD</p></td>
+<td class="needs_points"><p>10</p></td>
+<td class="needs_code_nice"><p></p></td>
+<td class="needs_pypi_nice"><p><a class="reference external" href="https://pypi.org/project/sphinx-book-theme/">Link</a></p></td>
+<td class="needs_website_nice"><p></p></td>
+</tr>
+<tr class="need row-odd"><td class="needs_id"><p><a class="reference internal" href="../categories/extensions.html#DOXYSPHINX">DOXYSPHINX</a></p></td>
+<td class="needs_title"><p>doxysphinx</p></td>
+<td class="needs_sphinx_type"><p>extension</p></td>
+<td class="needs_license"><p>MIT</p></td>
+<td class="needs_points"><p>8</p></td>
+<td class="needs_code_nice"><p><a class="reference external" href="https://github.com/boschglobal/doxysphinx">Link</a></p></td>
+<td class="needs_pypi_nice"><p><a class="reference external" href="https://pypi.org/project/doxysphinx/">Link</a></p></td>
+<td class="needs_website_nice"><p><a class="reference external" href="https://github.com/boschglobal/doxysphinx">Link</a></p></td>
+</tr>
+<tr class="need row-even"><td class="needs_id"><p><a class="reference internal" href="../categories/extensions.html#SPHINXCONTRIB-CHAPELDOMAIN">SPHINXCONTRIB-CHAPELDOMAIN</a></p></td>
+<td class="needs_title"><p>sphinxcontrib-chapeldomain</p></td>
+<td class="needs_sphinx_type"><p>extension</p></td>
+<td class="needs_license"><p>Apache</p></td>
+<td class="needs_points"><p>8</p></td>
+<td class="needs_code_nice"><p></p></td>
+<td class="needs_pypi_nice"><p><a class="reference external" href="https://pypi.org/project/sphinxcontrib-chapeldomain/">Link</a></p></td>
+<td class="needs_website_nice"><p><a class="reference external" href="https://github.com/chapel-lang/sphinxcontrib-chapeldomain">Link</a></p></td>
+</tr>
+<tr class="need row-odd"><td class="needs_id"><p><a class="reference internal" href="../categories/themes.html#ANSYS-SPHINX-THEME">ANSYS-SPHINX-THEME</a></p></td>
+<td class="needs_title"><p>ansys-sphinx-theme</p></td>
+<td class="needs_sphinx_type"><p>theme</p></td>
+<td class="needs_license"><p>MIT</p></td>
+<td class="needs_points"><p>8</p></td>
+<td class="needs_code_nice"><p></p></td>
+<td class="needs_pypi_nice"><p><a class="reference external" href="https://pypi.org/project/ansys-sphinx-theme/">Link</a></p></td>
+<td class="needs_website_nice"><p></p></td>
+</tr>
+<tr class="need row-even"><td class="needs_id"><p><a class="reference internal" href="../categories/themes.html#SPHINX-ANSIBLE-THEME">SPHINX-ANSIBLE-THEME</a></p></td>
+<td class="needs_title"><p>sphinx-ansible-theme</p></td>
+<td class="needs_sphinx_type"><p>theme</p></td>
+<td class="needs_license"><p>MIT</p></td>
+<td class="needs_points"><p>9</p></td>
+<td class="needs_code_nice"><p></p></td>
+<td class="needs_pypi_nice"><p><a class="reference external" href="https://pypi.org/project/sphinx-ansible-theme/">Link</a></p></td>
+<td class="needs_website_nice"><p></p></td>
+</tr>
+<tr class="need row-odd"><td class="needs_id"><p><a class="reference internal" href="../categories/extensions.html#SPHINX-CLICK">SPHINX-CLICK</a></p></td>
+<td class="needs_title"><p>sphinx-click</p></td>
+<td class="needs_sphinx_type"><p>extension</p></td>
+<td class="needs_license"><p>MIT</p></td>
+<td class="needs_points"><p>10</p></td>
+<td class="needs_code_nice"><p></p></td>
+<td class="needs_pypi_nice"><p><a class="reference external" href="https://pypi.org/project/sphinx-click/">Link</a></p></td>
+<td class="needs_website_nice"><p><a class="reference external" href="https://github.com/click-contrib/sphinx-click">Link</a></p></td>
+</tr>
+<tr class="need row-even"><td class="needs_id"><p><a class="reference internal" href="../categories/others.html#COAX">COAX</a></p></td>
+<td class="needs_title"><p>coax</p></td>
+<td class="needs_sphinx_type"><p>other</p></td>
+<td class="needs_license"><p>MIT</p></td>
+<td class="needs_points"><p>7</p></td>
+<td class="needs_code_nice"><p></p></td>
+<td class="needs_pypi_nice"><p><a class="reference external" href="https://pypi.org/project/coax/">Link</a></p></td>
+<td class="needs_website_nice"><p><a class="reference external" href="https://coax.readthedocs.io">Link</a></p></td>
+</tr>
+<tr class="need row-odd"><td class="needs_id"><p><a class="reference internal" href="../categories/themes.html#FURO">FURO</a></p></td>
+<td class="needs_title"><p>furo</p></td>
+<td class="needs_sphinx_type"><p>theme</p></td>
+<td class="needs_license"><p>MIT</p></td>
+<td class="needs_points"><p>10</p></td>
+<td class="needs_code_nice"><p></p></td>
+<td class="needs_pypi_nice"><p><a class="reference external" href="https://pypi.org/project/furo/">Link</a></p></td>
+<td class="needs_website_nice"><p></p></td>
+</tr>
+<tr class="need row-even"><td class="needs_id"><p><a class="reference internal" href="../categories/extensions.html#SPHINX-MATHJAX-OFFLINE">SPHINX-MATHJAX-OFFLINE</a></p></td>
+<td class="needs_title"><p>sphinx-mathjax-offline</p></td>
+<td class="needs_sphinx_type"><p>extension</p></td>
+<td class="needs_license"><p>MIT</p></td>
+<td class="needs_points"><p>6</p></td>
+<td class="needs_code_nice"><p></p></td>
+<td class="needs_pypi_nice"><p><a class="reference external" href="https://pypi.org/project/sphinx-mathjax-offline/">Link</a></p></td>
+<td class="needs_website_nice"><p><a class="reference external" href="https://gitlab.com/thomaswucher/sphinx-mathjax-offline">Link</a></p></td>
+</tr>
+<tr class="need row-odd"><td class="needs_id"><p><a class="reference internal" href="../categories/themes.html#SPHINX-AIRFLOW-THEME">SPHINX-AIRFLOW-THEME</a></p></td>
+<td class="needs_title"><p>sphinx-airflow-theme</p></td>
+<td class="needs_sphinx_type"><p>theme</p></td>
+<td class="needs_license"><p>Apache</p></td>
+<td class="needs_points"><p>9</p></td>
+<td class="needs_code_nice"><p></p></td>
+<td class="needs_pypi_nice"><p><a class="reference external" href="https://pypi.org/project/sphinx-airflow-theme/">Link</a></p></td>
+<td class="needs_website_nice"><p><a class="reference external" href="https://github.com/apache/airflow-site/tree/aip-11">Link</a></p></td>
+</tr>
+<tr class="need row-even"><td class="needs_id"><p><a class="reference internal" href="../categories/others.html#PYTORCH-IE">PYTORCH-IE</a></p></td>
+<td class="needs_title"><p>pytorch-ie</p></td>
+<td class="needs_sphinx_type"><p>other</p></td>
+<td class="needs_license"><p>MIT</p></td>
+<td class="needs_points"><p>6</p></td>
+<td class="needs_code_nice"><p><a class="reference external" href="https://github.com/christophalt/pytorch-ie">Link</a></p></td>
+<td class="needs_pypi_nice"><p><a class="reference external" href="https://pypi.org/project/pytorch-ie/">Link</a></p></td>
+<td class="needs_website_nice"><p><a class="reference external" href="https://github.com/christophalt/pytorch-ie">Link</a></p></td>
+</tr>
+<tr class="need row-odd"><td class="needs_id"><p><a class="reference internal" href="../categories/themes.html#SPHINX-LV2-THEME">SPHINX-LV2-THEME</a></p></td>
+<td class="needs_title"><p>sphinx-lv2-theme</p></td>
+<td class="needs_sphinx_type"><p>theme</p></td>
+<td class="needs_license"><p>ISC</p></td>
+<td class="needs_points"><p>6</p></td>
+<td class="needs_code_nice"><p></p></td>
+<td class="needs_pypi_nice"><p><a class="reference external" href="https://pypi.org/project/sphinx-lv2-theme/">Link</a></p></td>
+<td class="needs_website_nice"><p><a class="reference external" href="https://gitlab.com/lv2/sphinx_lv2_theme">Link</a></p></td>
+</tr>
+<tr class="need row-even"><td class="needs_id"><p><a class="reference internal" href="../categories/extensions.html#RUNESTONE-PETLJADOC">RUNESTONE-PETLJADOC</a></p></td>
+<td class="needs_title"><p>runestone-petljadoc</p></td>
+<td class="needs_sphinx_type"><p>extension</p></td>
+<td class="needs_license"><p>GPL3</p></td>
+<td class="needs_points"><p>6</p></td>
+<td class="needs_code_nice"><p></p></td>
+<td class="needs_pypi_nice"><p><a class="reference external" href="https://pypi.org/project/runestone-petljadoc/">Link</a></p></td>
+<td class="needs_website_nice"><p><a class="reference external" href="https://github.com/RunestoneInteractive/RunestoneComponents">Link</a></p></td>
+</tr>
+<tr class="need row-odd"><td class="needs_id"><p><a class="reference internal" href="../categories/extensions.html#SPHINXCONTRIB-OPENDATASERVICES-JSONSCHEMA">SPHINXCONTRIB-OPENDATASERVICES-JSONSCHEMA</a></p></td>
+<td class="needs_title"><p>sphinxcontrib-opendataservices-jsonschema</p></td>
+<td class="needs_sphinx_type"><p>extension</p></td>
+<td class="needs_license"><p>BSD</p></td>
+<td class="needs_points"><p>6</p></td>
+<td class="needs_code_nice"><p></p></td>
+<td class="needs_pypi_nice"><p><a class="reference external" href="https://pypi.org/project/sphinxcontrib-opendataservices-jsonschema/">Link</a></p></td>
+<td class="needs_website_nice"><p><a class="reference external" href="https://github.com/OpenDataServices/sphinxcontrib-opendataservices-jsonschema">Link</a></p></td>
+</tr>
+<tr class="need row-even"><td class="needs_id"><p><a class="reference internal" href="../categories/extensions.html#SPHINXCONTRIB-BITFIELD">SPHINXCONTRIB-BITFIELD</a></p></td>
+<td class="needs_title"><p>sphinxcontrib-bitfield</p></td>
+<td class="needs_sphinx_type"><p>extension</p></td>
+<td class="needs_license"><p>BSD</p></td>
+<td class="needs_points"><p>6</p></td>
+<td class="needs_code_nice"><p></p></td>
+<td class="needs_pypi_nice"><p><a class="reference external" href="https://pypi.org/project/sphinxcontrib-bitfield/">Link</a></p></td>
+<td class="needs_website_nice"><p><a class="reference external" href="https://github.com/Arth-ur/sphinxcontrib-bitfield">Link</a></p></td>
+</tr>
+<tr class="need row-odd"><td class="needs_id"><p><a class="reference internal" href="../categories/others.html#CURIES">CURIES</a></p></td>
+<td class="needs_title"><p>curies</p></td>
+<td class="needs_sphinx_type"><p>other</p></td>
+<td class="needs_license"><p>MIT</p></td>
+<td class="needs_points"><p>9</p></td>
+<td class="needs_code_nice"><p></p></td>
+<td class="needs_pypi_nice"><p><a class="reference external" href="https://pypi.org/project/curies/">Link</a></p></td>
+<td class="needs_website_nice"><p><a class="reference external" href="https://github.com/cthoyt/curies">Link</a></p></td>
+</tr>
+<tr class="need row-even"><td class="needs_id"><p><a class="reference internal" href="../categories/themes.html#SPHINX-IMMATERIAL">SPHINX-IMMATERIAL</a></p></td>
+<td class="needs_title"><p>sphinx-immaterial</p></td>
+<td class="needs_sphinx_type"><p>theme</p></td>
+<td class="needs_license"><p>MIT</p></td>
+<td class="needs_points"><p>8</p></td>
+<td class="needs_code_nice"><p></p></td>
+<td class="needs_pypi_nice"><p><a class="reference external" href="https://pypi.org/project/sphinx-immaterial/">Link</a></p></td>
+<td class="needs_website_nice"><p><a class="reference external" href="https://github.com/jbms/sphinx-immaterial">Link</a></p></td>
+</tr>
+<tr class="need row-odd"><td class="needs_id"><p><a class="reference internal" href="../categories/themes.html#SPHINX-RTD-THEME">SPHINX-RTD-THEME</a></p></td>
+<td class="needs_title"><p>sphinx-rtd-theme</p></td>
+<td class="needs_sphinx_type"><p>theme</p></td>
+<td class="needs_license"><p>MIT</p></td>
+<td class="needs_points"><p>10</p></td>
+<td class="needs_code_nice"><p></p></td>
+<td class="needs_pypi_nice"><p><a class="reference external" href="https://pypi.org/project/sphinx-rtd-theme/">Link</a></p></td>
+<td class="needs_website_nice"><p><a class="reference external" href="https://github.com/readthedocs/sphinx_rtd_theme">Link</a></p></td>
+</tr>
+<tr class="need row-even"><td class="needs_id"><p><a class="reference internal" href="../categories/extensions.html#MLX.TRACEABILITY">MLX.TRACEABILITY</a></p></td>
+<td class="needs_title"><p>mlx.traceability</p></td>
+<td class="needs_sphinx_type"><p>extension</p></td>
+<td class="needs_license"><p>GPL3</p></td>
+<td class="needs_points"><p>5</p></td>
+<td class="needs_code_nice"><p></p></td>
+<td class="needs_pypi_nice"><p><a class="reference external" href="https://pypi.org/project/mlx.traceability/">Link</a></p></td>
+<td class="needs_website_nice"><p><a class="reference external" href="https://github.com/melexis/sphinx-traceability-extension">Link</a></p></td>
+</tr>
+<tr class="need row-odd"><td class="needs_id"><p><a class="reference internal" href="../categories/extensions.html#SPHINXCONTRIB-PACKAGES">SPHINXCONTRIB-PACKAGES</a></p></td>
+<td class="needs_title"><p>sphinxcontrib-packages</p></td>
+<td class="needs_sphinx_type"><p>extension</p></td>
+<td class="needs_license"><p>other</p></td>
+<td class="needs_points"><p>6</p></td>
+<td class="needs_code_nice"><p></p></td>
+<td class="needs_pypi_nice"><p><a class="reference external" href="https://pypi.org/project/sphinxcontrib-packages/">Link</a></p></td>
+<td class="needs_website_nice"><p><a class="reference external" href="https://git.framasoft.org/spalax/sphinxcontrib-packages">Link</a></p></td>
+</tr>
+<tr class="need row-even"><td class="needs_id"><p><a class="reference internal" href="../categories/extensions.html#SPHINXCONTRIB-PROOF">SPHINXCONTRIB-PROOF</a></p></td>
+<td class="needs_title"><p>sphinxcontrib-proof</p></td>
+<td class="needs_sphinx_type"><p>extension</p></td>
+<td class="needs_license"><p>other</p></td>
+<td class="needs_points"><p>6</p></td>
+<td class="needs_code_nice"><p></p></td>
+<td class="needs_pypi_nice"><p><a class="reference external" href="https://pypi.org/project/sphinxcontrib-proof/">Link</a></p></td>
+<td class="needs_website_nice"><p><a class="reference external" href="https://framagit.org/spalax/sphinxcontrib-proof">Link</a></p></td>
+</tr>
+<tr class="need row-odd"><td class="needs_id"><p><a class="reference internal" href="../categories/others.html#SPHOBJINV">SPHOBJINV</a></p></td>
+<td class="needs_title"><p>sphobjinv</p></td>
+<td class="needs_sphinx_type"><p>other</p></td>
+<td class="needs_license"><p>MIT</p></td>
+<td class="needs_points"><p>9</p></td>
+<td class="needs_code_nice"><p></p></td>
+<td class="needs_pypi_nice"><p><a class="reference external" href="https://pypi.org/project/sphobjinv/">Link</a></p></td>
+<td class="needs_website_nice"><p><a class="reference external" href="https://github.com/bskinn/sphobjinv">Link</a></p></td>
+</tr>
+<tr class="need row-even"><td class="needs_id"><p><a class="reference internal" href="../categories/themes.html#ASHK-SPHINX-THEME">ASHK-SPHINX-THEME</a></p></td>
+<td class="needs_title"><p>ashk-sphinx-theme</p></td>
+<td class="needs_sphinx_type"><p>theme</p></td>
+<td class="needs_license"><p>MIT</p></td>
+<td class="needs_points"><p>6</p></td>
+<td class="needs_code_nice"><p></p></td>
+<td class="needs_pypi_nice"><p><a class="reference external" href="https://pypi.org/project/ashk-sphinx-theme/">Link</a></p></td>
+<td class="needs_website_nice"><p><a class="reference external" href="https://github.com/a-ramti/ashk_sphinx_theme">Link</a></p></td>
+</tr>
+<tr class="need row-odd"><td class="needs_id"><p><a class="reference internal" href="../categories/extensions.html#SPHINX-SQLITE3FTS">SPHINX-SQLITE3FTS</a></p></td>
+<td class="needs_title"><p>sphinx-sqlite3fts</p></td>
+<td class="needs_sphinx_type"><p>extension</p></td>
+<td class="needs_license"><p>Apache</p></td>
+<td class="needs_points"><p>6</p></td>
+<td class="needs_code_nice"><p><a class="reference external" href="https://github.com/attakei-lab/sphinx-sqlite3fts">Link</a></p></td>
+<td class="needs_pypi_nice"><p><a class="reference external" href="https://pypi.org/project/sphinx-sqlite3fts/">Link</a></p></td>
+<td class="needs_website_nice"><p></p></td>
+</tr>
+<tr class="need row-even"><td class="needs_id"><p><a class="reference internal" href="../categories/extensions.html#SPHINX-GITSTAMP">SPHINX-GITSTAMP</a></p></td>
+<td class="needs_title"><p>sphinx-gitstamp</p></td>
+<td class="needs_sphinx_type"><p>extension</p></td>
+<td class="needs_license"><p>BSD</p></td>
+<td class="needs_points"><p>8</p></td>
+<td class="needs_code_nice"><p></p></td>
+<td class="needs_pypi_nice"><p><a class="reference external" href="https://pypi.org/project/sphinx-gitstamp/">Link</a></p></td>
+<td class="needs_website_nice"><p><a class="reference external" href="https://github.com/jdillard/sphinx-gitstamp">Link</a></p></td>
+</tr>
+<tr class="need row-odd"><td class="needs_id"><p><a class="reference internal" href="../categories/others.html#CHAPPS">CHAPPS</a></p></td>
+<td class="needs_title"><p>chapps</p></td>
+<td class="needs_sphinx_type"><p>other</p></td>
+<td class="needs_license"><p>MIT</p></td>
+<td class="needs_points"><p>7</p></td>
+<td class="needs_code_nice"><p></p></td>
+<td class="needs_pypi_nice"><p><a class="reference external" href="https://pypi.org/project/chapps/">Link</a></p></td>
+<td class="needs_website_nice"><p><a class="reference external" href="https://github.com/easydns/chapps">Link</a></p></td>
+</tr>
+<tr class="need row-even"><td class="needs_id"><p><a class="reference internal" href="../categories/themes.html#VISIONZ">VISIONZ</a></p></td>
+<td class="needs_title"><p>visionz</p></td>
+<td class="needs_sphinx_type"><p>theme</p></td>
+<td class="needs_license"><p>Apache</p></td>
+<td class="needs_points"><p>6</p></td>
+<td class="needs_code_nice"><p></p></td>
+<td class="needs_pypi_nice"><p><a class="reference external" href="https://pypi.org/project/visionz/">Link</a></p></td>
+<td class="needs_website_nice"><p></p></td>
+</tr>
+<tr class="need row-odd"><td class="needs_id"><p><a class="reference internal" href="../categories/extensions.html#SPHINX_EXTERNAL_TOC">SPHINX_EXTERNAL_TOC</a></p></td>
+<td class="needs_title"><p>sphinx_external_toc</p></td>
+<td class="needs_sphinx_type"><p>extension</p></td>
+<td class="needs_license"><p>MIT</p></td>
+<td class="needs_points"><p>5</p></td>
+<td class="needs_code_nice"><p></p></td>
+<td class="needs_pypi_nice"><p><a class="reference external" href="https://pypi.org/project/sphinx_external_toc/">Link</a></p></td>
+<td class="needs_website_nice"><p><a class="reference external" href="None">Link</a></p></td>
+</tr>
+<tr class="need row-even"><td class="needs_id"><p><a class="reference internal" href="../categories/extensions.html#SPHINX-NEW-TAB-LINK">SPHINX-NEW-TAB-LINK</a></p></td>
+<td class="needs_title"><p>sphinx-new-tab-link</p></td>
+<td class="needs_sphinx_type"><p>extension</p></td>
+<td class="needs_license"><p>MIT</p></td>
+<td class="needs_points"><p>6</p></td>
+<td class="needs_code_nice"><p></p></td>
+<td class="needs_pypi_nice"><p><a class="reference external" href="https://pypi.org/project/sphinx-new-tab-link/">Link</a></p></td>
+<td class="needs_website_nice"><p><a class="reference external" href="https://github.com/ftnext/sphinx-new-tab-link">Link</a></p></td>
+</tr>
+<tr class="need row-odd"><td class="needs_id"><p><a class="reference internal" href="../categories/extensions.html#SPHINXCONTRIB-DJANGO2">SPHINXCONTRIB-DJANGO2</a></p></td>
+<td class="needs_title"><p>sphinxcontrib-django2</p></td>
+<td class="needs_sphinx_type"><p>extension</p></td>
+<td class="needs_license"><p>Apache</p></td>
+<td class="needs_points"><p>8</p></td>
+<td class="needs_code_nice"><p></p></td>
+<td class="needs_pypi_nice"><p><a class="reference external" href="https://pypi.org/project/sphinxcontrib-django2/">Link</a></p></td>
+<td class="needs_website_nice"><p><a class="reference external" href="https://github.com/timoludwig/sphinxcontrib-django2">Link</a></p></td>
+</tr>
+<tr class="need row-even"><td class="needs_id"><p><a class="reference internal" href="../categories/extensions.html#SPHINX_TIMELINE">SPHINX_TIMELINE</a></p></td>
+<td class="needs_title"><p>sphinx_timeline</p></td>
+<td class="needs_sphinx_type"><p>extension</p></td>
+<td class="needs_license"><p>MIT</p></td>
+<td class="needs_points"><p>5</p></td>
+<td class="needs_code_nice"><p></p></td>
+<td class="needs_pypi_nice"><p><a class="reference external" href="https://pypi.org/project/sphinx_timeline/">Link</a></p></td>
+<td class="needs_website_nice"><p><a class="reference external" href="None">Link</a></p></td>
+</tr>
+<tr class="need row-odd"><td class="needs_id"><p><a class="reference internal" href="../categories/extensions.html#SPHINXCONTRIB.DATATEMPLATES">SPHINXCONTRIB.DATATEMPLATES</a></p></td>
+<td class="needs_title"><p>sphinxcontrib.datatemplates</p></td>
+<td class="needs_sphinx_type"><p>extension</p></td>
+<td class="needs_license"><p>BSD</p></td>
+<td class="needs_points"><p>5</p></td>
+<td class="needs_code_nice"><p></p></td>
+<td class="needs_pypi_nice"><p><a class="reference external" href="https://pypi.org/project/sphinxcontrib.datatemplates/">Link</a></p></td>
+<td class="needs_website_nice"><p><a class="reference external" href="http://github.com/sphinx-contrib/datatemplates">Link</a></p></td>
+</tr>
+<tr class="need row-even"><td class="needs_id"><p><a class="reference internal" href="../categories/extensions.html#SPHINXEXT-OPENGRAPH">SPHINXEXT-OPENGRAPH</a></p></td>
+<td class="needs_title"><p>sphinxext-opengraph</p></td>
+<td class="needs_sphinx_type"><p>extension</p></td>
+<td class="needs_license"><p>BSD</p></td>
+<td class="needs_points"><p>10</p></td>
+<td class="needs_code_nice"><p></p></td>
+<td class="needs_pypi_nice"><p><a class="reference external" href="https://pypi.org/project/sphinxext-opengraph/">Link</a></p></td>
+<td class="needs_website_nice"><p><a class="reference external" href="https://github.com/wpilibsuite/sphinxext-opengraph">Link</a></p></td>
+</tr>
+<tr class="need row-odd"><td class="needs_id"><p><a class="reference internal" href="../categories/others.html#BOHICALOG">BOHICALOG</a></p></td>
+<td class="needs_title"><p>bohicalog</p></td>
+<td class="needs_sphinx_type"><p>other</p></td>
+<td class="needs_license"><p>MIT</p></td>
+<td class="needs_points"><p>8</p></td>
+<td class="needs_code_nice"><p></p></td>
+<td class="needs_pypi_nice"><p><a class="reference external" href="https://pypi.org/project/bohicalog/">Link</a></p></td>
+<td class="needs_website_nice"><p><a class="reference external" href="https://github.com/BOHICA-Labs/bohicalog">Link</a></p></td>
+</tr>
+<tr class="need row-even"><td class="needs_id"><p><a class="reference internal" href="../categories/others.html#OCEANAI">OCEANAI</a></p></td>
+<td class="needs_title"><p>oceanai</p></td>
+<td class="needs_sphinx_type"><p>other</p></td>
+<td class="needs_license"><p>BSD</p></td>
+<td class="needs_points"><p>7</p></td>
+<td class="needs_code_nice"><p></p></td>
+<td class="needs_pypi_nice"><p><a class="reference external" href="https://pypi.org/project/oceanai/">Link</a></p></td>
+<td class="needs_website_nice"><p><a class="reference external" href="https://github.com/DmitryRyumin/oceanai">Link</a></p></td>
+</tr>
+<tr class="need row-odd"><td class="needs_id"><p><a class="reference internal" href="../categories/themes.html#CLICK-EXTRA">CLICK-EXTRA</a></p></td>
+<td class="needs_title"><p>click-extra</p></td>
+<td class="needs_sphinx_type"><p>theme</p></td>
+<td class="needs_license"><p>GPL2</p></td>
+<td class="needs_points"><p>9</p></td>
+<td class="needs_code_nice"><p><a class="reference external" href="https://github.com/kdeldycke/click-extra">Link</a></p></td>
+<td class="needs_pypi_nice"><p><a class="reference external" href="https://pypi.org/project/click-extra/">Link</a></p></td>
+<td class="needs_website_nice"><p><a class="reference external" href="https://github.com/kdeldycke/click-extra">Link</a></p></td>
+</tr>
+<tr class="need row-even"><td class="needs_id"><p><a class="reference internal" href="../categories/extensions.html#DOCS-VERSIONS-MENU">DOCS-VERSIONS-MENU</a></p></td>
+<td class="needs_title"><p>docs-versions-menu</p></td>
+<td class="needs_sphinx_type"><p>extension</p></td>
+<td class="needs_license"><p>MIT</p></td>
+<td class="needs_points"><p>6</p></td>
+<td class="needs_code_nice"><p></p></td>
+<td class="needs_pypi_nice"><p><a class="reference external" href="https://pypi.org/project/docs-versions-menu/">Link</a></p></td>
+<td class="needs_website_nice"><p><a class="reference external" href="https://github.com/goerz/docs_versions_menu">Link</a></p></td>
+</tr>
+<tr class="need row-odd"><td class="needs_id"><p><a class="reference internal" href="../categories/extensions.html#M2R">M2R</a></p></td>
+<td class="needs_title"><p>m2r</p></td>
+<td class="needs_sphinx_type"><p>extension</p></td>
+<td class="needs_license"><p>MIT</p></td>
+<td class="needs_points"><p>10</p></td>
+<td class="needs_code_nice"><p></p></td>
+<td class="needs_pypi_nice"><p><a class="reference external" href="https://pypi.org/project/m2r/">Link</a></p></td>
+<td class="needs_website_nice"><p><a class="reference external" href="https://github.com/miyakogi/m2r">Link</a></p></td>
+</tr>
+<tr class="need row-even"><td class="needs_id"><p><a class="reference internal" href="../categories/extensions.html#SPHINXCONTRIB-PLANTUML">SPHINXCONTRIB-PLANTUML</a></p></td>
+<td class="needs_title"><p>sphinxcontrib-plantuml</p></td>
+<td class="needs_sphinx_type"><p>extension</p></td>
+<td class="needs_license"><p>BSD</p></td>
+<td class="needs_points"><p>10</p></td>
+<td class="needs_code_nice"><p></p></td>
+<td class="needs_pypi_nice"><p><a class="reference external" href="https://pypi.org/project/sphinxcontrib-plantuml/">Link</a></p></td>
+<td class="needs_website_nice"><p><a class="reference external" href="https://github.com/sphinx-contrib/plantuml/">Link</a></p></td>
+</tr>
+<tr class="need row-odd"><td class="needs_id"><p><a class="reference internal" href="../categories/extensions.html#MLX.JIRA-TRACEABILITY">MLX.JIRA-TRACEABILITY</a></p></td>
+<td class="needs_title"><p>mlx.jira-traceability</p></td>
+<td class="needs_sphinx_type"><p>extension</p></td>
+<td class="needs_license"><p>GPL3</p></td>
+<td class="needs_points"><p>5</p></td>
+<td class="needs_code_nice"><p></p></td>
+<td class="needs_pypi_nice"><p><a class="reference external" href="https://pypi.org/project/mlx.jira-traceability/">Link</a></p></td>
+<td class="needs_website_nice"><p><a class="reference external" href="https://github.com/melexis/jira-traceability">Link</a></p></td>
+</tr>
+<tr class="need row-even"><td class="needs_id"><p><a class="reference internal" href="../categories/themes.html#PYDATA-SPHINX-THEME">PYDATA-SPHINX-THEME</a></p></td>
+<td class="needs_title"><p>pydata-sphinx-theme</p></td>
+<td class="needs_sphinx_type"><p>theme</p></td>
+<td class="needs_license"><p>BSD</p></td>
+<td class="needs_points"><p>10</p></td>
+<td class="needs_code_nice"><p></p></td>
+<td class="needs_pypi_nice"><p><a class="reference external" href="https://pypi.org/project/pydata-sphinx-theme/">Link</a></p></td>
+<td class="needs_website_nice"><p></p></td>
+</tr>
+<tr class="need row-odd"><td class="needs_id"><p><a class="reference internal" href="../categories/themes.html#TVM-BOOK">TVM-BOOK</a></p></td>
+<td class="needs_title"><p>tvm-book</p></td>
+<td class="needs_sphinx_type"><p>theme</p></td>
+<td class="needs_license"><p>Apache</p></td>
+<td class="needs_points"><p>6</p></td>
+<td class="needs_code_nice"><p></p></td>
+<td class="needs_pypi_nice"><p><a class="reference external" href="https://pypi.org/project/tvm-book/">Link</a></p></td>
+<td class="needs_website_nice"><p></p></td>
+</tr>
+<tr class="need row-even"><td class="needs_id"><p><a class="reference internal" href="../categories/extensions.html#SPHINX-TSEGSEARCH">SPHINX-TSEGSEARCH</a></p></td>
+<td class="needs_title"><p>sphinx-tsegsearch</p></td>
+<td class="needs_sphinx_type"><p>extension</p></td>
+<td class="needs_license"><p>MIT</p></td>
+<td class="needs_points"><p>6</p></td>
+<td class="needs_code_nice"><p><a class="reference external" href="https://github.com/whosaysni/sphinx-tsegsearch/">Link</a></p></td>
+<td class="needs_pypi_nice"><p><a class="reference external" href="https://pypi.org/project/sphinx-tsegsearch/">Link</a></p></td>
+<td class="needs_website_nice"><p><a class="reference external" href="https://github.com/whosaysni/sphinx-tsegsearch/">Link</a></p></td>
+</tr>
+<tr class="need row-odd"><td class="needs_id"><p><a class="reference internal" href="../categories/others.html#SPHINX-COPYBUTTON">SPHINX-COPYBUTTON</a></p></td>
+<td class="needs_title"><p>sphinx-copybutton</p></td>
+<td class="needs_sphinx_type"><p>other</p></td>
+<td class="needs_license"><p>MIT</p></td>
+<td class="needs_points"><p>10</p></td>
+<td class="needs_code_nice"><p></p></td>
+<td class="needs_pypi_nice"><p><a class="reference external" href="https://pypi.org/project/sphinx-copybutton/">Link</a></p></td>
+<td class="needs_website_nice"><p><a class="reference external" href="https://github.com/executablebooks/sphinx-copybutton">Link</a></p></td>
+</tr>
+<tr class="need row-even"><td class="needs_id"><p><a class="reference internal" href="../categories/others.html#BIOONTOLOGIES">BIOONTOLOGIES</a></p></td>
+<td class="needs_title"><p>bioontologies</p></td>
+<td class="needs_sphinx_type"><p>other</p></td>
+<td class="needs_license"><p>MIT</p></td>
+<td class="needs_points"><p>7</p></td>
+<td class="needs_code_nice"><p></p></td>
+<td class="needs_pypi_nice"><p><a class="reference external" href="https://pypi.org/project/bioontologies/">Link</a></p></td>
+<td class="needs_website_nice"><p><a class="reference external" href="https://github.com/biopragmatics/bioontologies">Link</a></p></td>
+</tr>
+<tr class="need row-odd"><td class="needs_id"><p><a class="reference internal" href="../categories/extensions.html#SPHINXCONTRIB-SPELLING">SPHINXCONTRIB-SPELLING</a></p></td>
+<td class="needs_title"><p>sphinxcontrib-spelling</p></td>
+<td class="needs_sphinx_type"><p>extension</p></td>
+<td class="needs_license"><p>BSD</p></td>
+<td class="needs_points"><p>10</p></td>
+<td class="needs_code_nice"><p></p></td>
+<td class="needs_pypi_nice"><p><a class="reference external" href="https://pypi.org/project/sphinxcontrib-spelling/">Link</a></p></td>
+<td class="needs_website_nice"><p><a class="reference external" href="https://github.com/sphinx-contrib/spelling">Link</a></p></td>
+</tr>
+<tr class="need row-even"><td class="needs_id"><p><a class="reference internal" href="../categories/extensions.html#SPHINX-SUBPROJECTTOCTREE">SPHINX-SUBPROJECTTOCTREE</a></p></td>
+<td class="needs_title"><p>sphinx-subprojecttoctree</p></td>
+<td class="needs_sphinx_type"><p>extension</p></td>
+<td class="needs_license"><p>MIT</p></td>
+<td class="needs_points"><p>6</p></td>
+<td class="needs_code_nice"><p></p></td>
+<td class="needs_pypi_nice"><p><a class="reference external" href="https://pypi.org/project/sphinx-subprojecttoctree/">Link</a></p></td>
+<td class="needs_website_nice"><p><a class="reference external" href="https://sphinx-subprojecttoctree.readthedocs.io">Link</a></p></td>
+</tr>
+<tr class="need row-odd"><td class="needs_id"><p><a class="reference internal" href="../categories/extensions.html#SPHINX-ARGPARSE">SPHINX-ARGPARSE</a></p></td>
+<td class="needs_title"><p>sphinx-argparse</p></td>
+<td class="needs_sphinx_type"><p>extension</p></td>
+<td class="needs_license"><p>MIT</p></td>
+<td class="needs_points"><p>10</p></td>
+<td class="needs_code_nice"><p><a class="reference external" href="https://github.com/ashb/sphinx-argparse">Link</a></p></td>
+<td class="needs_pypi_nice"><p><a class="reference external" href="https://pypi.org/project/sphinx-argparse/">Link</a></p></td>
+<td class="needs_website_nice"><p><a class="reference external" href="https://github.com/ashb/sphinx-argparse">Link</a></p></td>
+</tr>
+<tr class="need row-even"><td class="needs_id"><p><a class="reference internal" href="../categories/others.html#KREUZBERGML">KREUZBERGML</a></p></td>
+<td class="needs_title"><p>kreuzbergml</p></td>
+<td class="needs_sphinx_type"><p>other</p></td>
+<td class="needs_license"><p>MIT</p></td>
+<td class="needs_points"><p>6</p></td>
+<td class="needs_code_nice"><p></p></td>
+<td class="needs_pypi_nice"><p><a class="reference external" href="https://pypi.org/project/kreuzbergml/">Link</a></p></td>
+<td class="needs_website_nice"><p><a class="reference external" href="https://github.com/LEAD-Machine-Learning/kreuzberg-ml">Link</a></p></td>
+</tr>
+<tr class="need row-odd"><td class="needs_id"><p><a class="reference internal" href="../categories/extensions.html#SPHINXCONTRIB-SVGBOB">SPHINXCONTRIB-SVGBOB</a></p></td>
+<td class="needs_title"><p>sphinxcontrib-svgbob</p></td>
+<td class="needs_sphinx_type"><p>extension</p></td>
+<td class="needs_license"><p>MIT</p></td>
+<td class="needs_points"><p>8</p></td>
+<td class="needs_code_nice"><p></p></td>
+<td class="needs_pypi_nice"><p><a class="reference external" href="https://pypi.org/project/sphinxcontrib-svgbob/">Link</a></p></td>
+<td class="needs_website_nice"><p><a class="reference external" href="https://github.com/sphinx-contrib/svgbob">Link</a></p></td>
+</tr>
+<tr class="need row-even"><td class="needs_id"><p><a class="reference internal" href="../categories/extensions.html#SPHINXCONTRIB-CONFLUENCEBUILDER">SPHINXCONTRIB-CONFLUENCEBUILDER</a></p></td>
+<td class="needs_title"><p>sphinxcontrib-confluencebuilder</p></td>
+<td class="needs_sphinx_type"><p>extension</p></td>
+<td class="needs_license"><p>BSD</p></td>
+<td class="needs_points"><p>9</p></td>
+<td class="needs_code_nice"><p></p></td>
+<td class="needs_pypi_nice"><p><a class="reference external" href="https://pypi.org/project/sphinxcontrib-confluencebuilder/">Link</a></p></td>
+<td class="needs_website_nice"><p></p></td>
+</tr>
+<tr class="need row-odd"><td class="needs_id"><p><a class="reference internal" href="../categories/extensions.html#SPHINXCONTRIB-DJANGO">SPHINXCONTRIB-DJANGO</a></p></td>
+<td class="needs_title"><p>sphinxcontrib-django</p></td>
+<td class="needs_sphinx_type"><p>extension</p></td>
+<td class="needs_license"><p>Apache</p></td>
+<td class="needs_points"><p>9</p></td>
+<td class="needs_code_nice"><p></p></td>
+<td class="needs_pypi_nice"><p><a class="reference external" href="https://pypi.org/project/sphinxcontrib-django/">Link</a></p></td>
+<td class="needs_website_nice"><p></p></td>
+</tr>
+<tr class="need row-even"><td class="needs_id"><p><a class="reference internal" href="../categories/extensions.html#SPHINXCONTRIB-MATLABDOMAIN">SPHINXCONTRIB-MATLABDOMAIN</a></p></td>
+<td class="needs_title"><p>sphinxcontrib-matlabdomain</p></td>
+<td class="needs_sphinx_type"><p>extension</p></td>
+<td class="needs_license"><p>BSD</p></td>
+<td class="needs_points"><p>9</p></td>
+<td class="needs_code_nice"><p></p></td>
+<td class="needs_pypi_nice"><p><a class="reference external" href="https://pypi.org/project/sphinxcontrib-matlabdomain/">Link</a></p></td>
+<td class="needs_website_nice"><p><a class="reference external" href="https://github.com/sphinx-contrib/matlabdomain">Link</a></p></td>
+</tr>
+<tr class="need row-odd"><td class="needs_id"><p><a class="reference internal" href="../categories/themes.html#TORCH-BOOK">TORCH-BOOK</a></p></td>
+<td class="needs_title"><p>torch-book</p></td>
+<td class="needs_sphinx_type"><p>theme</p></td>
+<td class="needs_license"><p>Apache</p></td>
+<td class="needs_points"><p>6</p></td>
+<td class="needs_code_nice"><p></p></td>
+<td class="needs_pypi_nice"><p><a class="reference external" href="https://pypi.org/project/torch-book/">Link</a></p></td>
+<td class="needs_website_nice"><p></p></td>
+</tr>
+<tr class="need row-even"><td class="needs_id"><p><a class="reference internal" href="../categories/extensions.html#SPHINXCONTRIB-YAMCS">SPHINXCONTRIB-YAMCS</a></p></td>
+<td class="needs_title"><p>sphinxcontrib-yamcs</p></td>
+<td class="needs_sphinx_type"><p>extension</p></td>
+<td class="needs_license"><p>BSD</p></td>
+<td class="needs_points"><p>6</p></td>
+<td class="needs_code_nice"><p></p></td>
+<td class="needs_pypi_nice"><p><a class="reference external" href="https://pypi.org/project/sphinxcontrib-yamcs/">Link</a></p></td>
+<td class="needs_website_nice"><p><a class="reference external" href="https://github.com/yamcs/sphinxcontrib-yamcs">Link</a></p></td>
+</tr>
+<tr class="need row-odd"><td class="needs_id"><p><a class="reference internal" href="../categories/extensions.html#SPHINX-EMF">SPHINX-EMF</a></p></td>
+<td class="needs_title"><p>sphinx-emf</p></td>
+<td class="needs_sphinx_type"><p>extension</p></td>
+<td class="needs_license"><p>MIT</p></td>
+<td class="needs_points"><p>6</p></td>
+<td class="needs_code_nice"><p><a class="reference external" href="http://github.com/useblocks/sphinx-emf">Link</a></p></td>
+<td class="needs_pypi_nice"><p><a class="reference external" href="https://pypi.org/project/sphinx-emf/">Link</a></p></td>
+<td class="needs_website_nice"><p><a class="reference external" href="http://github.com/useblocks/sphinx-emf">Link</a></p></td>
+</tr>
+<tr class="need row-even"><td class="needs_id"><p><a class="reference internal" href="../categories/extensions.html#SPHINX-VHDL">SPHINX-VHDL</a></p></td>
+<td class="needs_title"><p>sphinx-vhdl</p></td>
+<td class="needs_sphinx_type"><p>extension</p></td>
+<td class="needs_license"><p>BSD</p></td>
+<td class="needs_points"><p>6</p></td>
+<td class="needs_code_nice"><p></p></td>
+<td class="needs_pypi_nice"><p><a class="reference external" href="https://pypi.org/project/sphinx-vhdl/">Link</a></p></td>
+<td class="needs_website_nice"><p></p></td>
+</tr>
+<tr class="need row-odd"><td class="needs_id"><p><a class="reference internal" href="../categories/others.html#CHEMINFOPY">CHEMINFOPY</a></p></td>
+<td class="needs_title"><p>cheminfopy</p></td>
+<td class="needs_sphinx_type"><p>other</p></td>
+<td class="needs_license"><p>MIT</p></td>
+<td class="needs_points"><p>8</p></td>
+<td class="needs_code_nice"><p></p></td>
+<td class="needs_pypi_nice"><p><a class="reference external" href="https://pypi.org/project/cheminfopy/">Link</a></p></td>
+<td class="needs_website_nice"><p><a class="reference external" href="https://github.com/cheminfo-py/cheminfopy">Link</a></p></td>
+</tr>
+<tr class="need row-even"><td class="needs_id"><p><a class="reference internal" href="../categories/extensions.html#SPHINXCONTRIB.JQUERY">SPHINXCONTRIB.JQUERY</a></p></td>
+<td class="needs_title"><p>sphinxcontrib.jquery</p></td>
+<td class="needs_sphinx_type"><p>extension</p></td>
+<td class="needs_license"><p>BSD</p></td>
+<td class="needs_points"><p>5</p></td>
+<td class="needs_code_nice"><p></p></td>
+<td class="needs_pypi_nice"><p><a class="reference external" href="https://pypi.org/project/sphinxcontrib.jquery/">Link</a></p></td>
+<td class="needs_website_nice"><p></p></td>
+</tr>
+<tr class="need row-odd"><td class="needs_id"><p><a class="reference internal" href="../categories/themes.html#FUROMON">FUROMON</a></p></td>
+<td class="needs_title"><p>furomon</p></td>
+<td class="needs_sphinx_type"><p>theme</p></td>
+<td class="needs_license"><p>MIT</p></td>
+<td class="needs_points"><p>6</p></td>
+<td class="needs_code_nice"><p></p></td>
+<td class="needs_pypi_nice"><p><a class="reference external" href="https://pypi.org/project/furomon/">Link</a></p></td>
+<td class="needs_website_nice"><p><a class="reference external" href="None">Link</a></p></td>
+</tr>
+<tr class="need row-even"><td class="needs_id"><p><a class="reference internal" href="../categories/themes.html#TENSORLY-SPHINX-THEME">TENSORLY-SPHINX-THEME</a></p></td>
+<td class="needs_title"><p>tensorly-sphinx-theme</p></td>
+<td class="needs_sphinx_type"><p>theme</p></td>
+<td class="needs_license"><p>Modified BSD</p></td>
+<td class="needs_points"><p>8</p></td>
+<td class="needs_code_nice"><p></p></td>
+<td class="needs_pypi_nice"><p><a class="reference external" href="https://pypi.org/project/tensorly-sphinx-theme/">Link</a></p></td>
+<td class="needs_website_nice"><p><a class="reference external" href="https://github.com/tensorly/tensorly-sphinx-theme">Link</a></p></td>
+</tr>
+<tr class="need row-odd"><td class="needs_id"><p><a class="reference internal" href="../categories/extensions.html#SPHINXCONTRIB-REPL">SPHINXCONTRIB-REPL</a></p></td>
+<td class="needs_title"><p>sphinxcontrib-repl</p></td>
+<td class="needs_sphinx_type"><p>extension</p></td>
+<td class="needs_license"><p>GPL2</p></td>
+<td class="needs_points"><p>6</p></td>
+<td class="needs_code_nice"><p><a class="reference external" href="https://github.com/sphinx-contrib/repl">Link</a></p></td>
+<td class="needs_pypi_nice"><p><a class="reference external" href="https://pypi.org/project/sphinxcontrib-repl/">Link</a></p></td>
+<td class="needs_website_nice"><p></p></td>
+</tr>
+<tr class="need row-even"><td class="needs_id"><p><a class="reference internal" href="../categories/extensions.html#SPHINX-PLAUSIBLE">SPHINX-PLAUSIBLE</a></p></td>
+<td class="needs_title"><p>sphinx-plausible</p></td>
+<td class="needs_sphinx_type"><p>extension</p></td>
+<td class="needs_license"><p>MIT</p></td>
+<td class="needs_points"><p>6</p></td>
+<td class="needs_code_nice"><p></p></td>
+<td class="needs_pypi_nice"><p><a class="reference external" href="https://pypi.org/project/sphinx-plausible/">Link</a></p></td>
+<td class="needs_website_nice"><p><a class="reference external" href="None">Link</a></p></td>
+</tr>
+<tr class="need row-odd"><td class="needs_id"><p><a class="reference internal" href="../categories/extensions.html#SPHINX-PROBS-RDF">SPHINX-PROBS-RDF</a></p></td>
+<td class="needs_title"><p>sphinx-probs-rdf</p></td>
+<td class="needs_sphinx_type"><p>extension</p></td>
+<td class="needs_license"><p>MIT</p></td>
+<td class="needs_points"><p>6</p></td>
+<td class="needs_code_nice"><p></p></td>
+<td class="needs_pypi_nice"><p><a class="reference external" href="https://pypi.org/project/sphinx-probs-rdf/">Link</a></p></td>
+<td class="needs_website_nice"><p><a class="reference external" href="https://github.com/ricklupton/sphinx_probs_rdf">Link</a></p></td>
+</tr>
+<tr class="need row-even"><td class="needs_id"><p><a class="reference internal" href="../categories/others.html#SPHINX-PERFORMANCE">SPHINX-PERFORMANCE</a></p></td>
+<td class="needs_title"><p>sphinx-performance</p></td>
+<td class="needs_sphinx_type"><p>other</p></td>
+<td class="needs_license"><p>MIT</p></td>
+<td class="needs_points"><p>6</p></td>
+<td class="needs_code_nice"><p><a class="reference external" href="https://github.com/useblocks/sphinx-performance">Link</a></p></td>
+<td class="needs_pypi_nice"><p><a class="reference external" href="https://pypi.org/project/sphinx-performance/">Link</a></p></td>
+<td class="needs_website_nice"><p><a class="reference external" href="https://github.com/useblocks/sphinx-performance">Link</a></p></td>
+</tr>
+<tr class="need row-odd"><td class="needs_id"><p><a class="reference internal" href="../categories/themes.html#SPHINX-SIMPLEPDF">SPHINX-SIMPLEPDF</a></p></td>
+<td class="needs_title"><p>sphinx-simplepdf</p></td>
+<td class="needs_sphinx_type"><p>extension</p></td>
+<td class="needs_license"><p>MIT</p></td>
+<td class="needs_points"><p>6</p></td>
+<td class="needs_code_nice"><p></p></td>
+<td class="needs_pypi_nice"><p><a class="reference external" href="https://pypi.org/project/sphinx-simplepdf/">Link</a></p></td>
+<td class="needs_website_nice"><p><a class="reference external" href="https://sphinx-simplepdf.readthedocs.io">Link</a></p></td>
+</tr>
+<tr class="need row-even"><td class="needs_id"><p><a class="reference internal" href="../categories/extensions.html#SPHINX-HOVERXREF">SPHINX-HOVERXREF</a></p></td>
+<td class="needs_title"><p>sphinx-hoverxref</p></td>
+<td class="needs_sphinx_type"><p>extension</p></td>
+<td class="needs_license"><p>MIT</p></td>
+<td class="needs_points"><p>9</p></td>
+<td class="needs_code_nice"><p></p></td>
+<td class="needs_pypi_nice"><p><a class="reference external" href="https://pypi.org/project/sphinx-hoverxref/">Link</a></p></td>
+<td class="needs_website_nice"><p><a class="reference external" href="None">Link</a></p></td>
+</tr>
+<tr class="need row-odd"><td class="needs_id"><p><a class="reference internal" href="../categories/extensions.html#DOCUMENTEER">DOCUMENTEER</a></p></td>
+<td class="needs_title"><p>documenteer</p></td>
+<td class="needs_sphinx_type"><p>extension</p></td>
+<td class="needs_license"><p>MIT</p></td>
+<td class="needs_points"><p>8</p></td>
+<td class="needs_code_nice"><p></p></td>
+<td class="needs_pypi_nice"><p><a class="reference external" href="https://pypi.org/project/documenteer/">Link</a></p></td>
+<td class="needs_website_nice"><p></p></td>
+</tr>
+<tr class="need row-even"><td class="needs_id"><p><a class="reference internal" href="../categories/others.html#METABOLIKE">METABOLIKE</a></p></td>
+<td class="needs_title"><p>metabolike</p></td>
+<td class="needs_sphinx_type"><p>other</p></td>
+<td class="needs_license"><p>GPL3</p></td>
+<td class="needs_points"><p>6</p></td>
+<td class="needs_code_nice"><p></p></td>
+<td class="needs_pypi_nice"><p><a class="reference external" href="https://pypi.org/project/metabolike/">Link</a></p></td>
+<td class="needs_website_nice"><p><a class="reference external" href="None">Link</a></p></td>
+</tr>
+<tr class="need row-odd"><td class="needs_id"><p><a class="reference internal" href="../categories/themes.html#SPHINX-PRESS-THEME-DARK">SPHINX-PRESS-THEME-DARK</a></p></td>
+<td class="needs_title"><p>sphinx-press-theme-dark</p></td>
+<td class="needs_sphinx_type"><p>theme</p></td>
+<td class="needs_license"><p>MIT</p></td>
+<td class="needs_points"><p>5</p></td>
+<td class="needs_code_nice"><p></p></td>
+<td class="needs_pypi_nice"><p><a class="reference external" href="https://pypi.org/project/sphinx-press-theme-dark/">Link</a></p></td>
+<td class="needs_website_nice"><p><a class="reference external" href="https://schettino72.github.io/sphinx_press_site/">Link</a></p></td>
+</tr>
+<tr class="need row-even"><td class="needs_id"><p><a class="reference internal" href="../categories/themes.html#SPHINX-AHD-THEME">SPHINX-AHD-THEME</a></p></td>
+<td class="needs_title"><p>sphinx-ahd-theme</p></td>
+<td class="needs_sphinx_type"><p>theme</p></td>
+<td class="needs_license"><p>MIT</p></td>
+<td class="needs_points"><p>6</p></td>
+<td class="needs_code_nice"><p></p></td>
+<td class="needs_pypi_nice"><p><a class="reference external" href="https://pypi.org/project/sphinx-ahd-theme/">Link</a></p></td>
+<td class="needs_website_nice"><p><a class="reference external" href="https://github.com/ahdcreative/sphinx_ahd_theme">Link</a></p></td>
+</tr>
+<tr class="need row-odd"><td class="needs_id"><p><a class="reference internal" href="../categories/themes.html#SPHINX-WAGTAIL-THEME">SPHINX-WAGTAIL-THEME</a></p></td>
+<td class="needs_title"><p>sphinx-wagtail-theme</p></td>
+<td class="needs_sphinx_type"><p>theme</p></td>
+<td class="needs_license"><p>MIT</p></td>
+<td class="needs_points"><p>7</p></td>
+<td class="needs_code_nice"><p></p></td>
+<td class="needs_pypi_nice"><p><a class="reference external" href="https://pypi.org/project/sphinx-wagtail-theme/">Link</a></p></td>
+<td class="needs_website_nice"><p><a class="reference external" href="https://github.com/wagtail/sphinx_wagtail_theme">Link</a></p></td>
+</tr>
+<tr class="need row-even"><td class="needs_id"><p><a class="reference internal" href="../categories/extensions.html#AUTODOC-PYDANTIC">AUTODOC-PYDANTIC</a></p></td>
+<td class="needs_title"><p>autodoc-pydantic</p></td>
+<td class="needs_sphinx_type"><p>extension</p></td>
+<td class="needs_license"><p>MIT</p></td>
+<td class="needs_points"><p>9</p></td>
+<td class="needs_code_nice"><p><a class="reference external" href="https://github.com/mansenfranzen/autodoc_pydantic">Link</a></p></td>
+<td class="needs_pypi_nice"><p><a class="reference external" href="https://pypi.org/project/autodoc-pydantic/">Link</a></p></td>
+<td class="needs_website_nice"><p><a class="reference external" href="https://github.com/mansenfranzen/autodoc_pydantic">Link</a></p></td>
+</tr>
+<tr class="need row-odd"><td class="needs_id"><p><a class="reference internal" href="../categories/themes.html#SPHINX-TSN-THEME">SPHINX-TSN-THEME</a></p></td>
+<td class="needs_title"><p>sphinx-tsn-theme</p></td>
+<td class="needs_sphinx_type"><p>theme</p></td>
+<td class="needs_license"><p>MIT</p></td>
+<td class="needs_points"><p>6</p></td>
+<td class="needs_code_nice"><p></p></td>
+<td class="needs_pypi_nice"><p><a class="reference external" href="https://pypi.org/project/sphinx-tsn-theme/">Link</a></p></td>
+<td class="needs_website_nice"><p><a class="reference external" href="https://www.tiac-systems.net">Link</a></p></td>
+</tr>
+<tr class="need row-even"><td class="needs_id"><p><a class="reference internal" href="../categories/extensions.html#SPHINX_MDINCLUDE">SPHINX_MDINCLUDE</a></p></td>
+<td class="needs_title"><p>sphinx_mdinclude</p></td>
+<td class="needs_sphinx_type"><p>extension</p></td>
+<td class="needs_license"><p>MIT</p></td>
+<td class="needs_points"><p>5</p></td>
+<td class="needs_code_nice"><p></p></td>
+<td class="needs_pypi_nice"><p><a class="reference external" href="https://pypi.org/project/sphinx_mdinclude/">Link</a></p></td>
+<td class="needs_website_nice"><p><a class="reference external" href="None">Link</a></p></td>
+</tr>
+<tr class="need row-odd"><td class="needs_id"><p><a class="reference internal" href="../categories/themes.html#PICCOLO-THEME">PICCOLO-THEME</a></p></td>
+<td class="needs_title"><p>piccolo-theme</p></td>
+<td class="needs_sphinx_type"><p>theme</p></td>
+<td class="needs_license"><p>MIT</p></td>
+<td class="needs_points"><p>8</p></td>
+<td class="needs_code_nice"><p></p></td>
+<td class="needs_pypi_nice"><p><a class="reference external" href="https://pypi.org/project/piccolo-theme/">Link</a></p></td>
+<td class="needs_website_nice"><p><a class="reference external" href="https://github.com/piccolo-orm/piccolo_theme">Link</a></p></td>
+</tr>
+<tr class="need row-even"><td class="needs_id"><p><a class="reference internal" href="../categories/extensions.html#SPHINXCONTRIB-SVG2PDFCONVERTER">SPHINXCONTRIB-SVG2PDFCONVERTER</a></p></td>
+<td class="needs_title"><p>sphinxcontrib-svg2pdfconverter</p></td>
+<td class="needs_sphinx_type"><p>extension</p></td>
+<td class="needs_license"><p>BSD</p></td>
+<td class="needs_points"><p>10</p></td>
+<td class="needs_code_nice"><p></p></td>
+<td class="needs_pypi_nice"><p><a class="reference external" href="https://pypi.org/project/sphinxcontrib-svg2pdfconverter/">Link</a></p></td>
+<td class="needs_website_nice"><p><a class="reference external" href="https://github.com/missinglinkelectronics/sphinxcontrib-svg2pdfconverter">Link</a></p></td>
+</tr>
+<tr class="need row-odd"><td class="needs_id"><p><a class="reference internal" href="../categories/others.html#SPHINX-WATCH">SPHINX-WATCH</a></p></td>
+<td class="needs_title"><p>sphinx-watch</p></td>
+<td class="needs_sphinx_type"><p>other</p></td>
+<td class="needs_license"><p>Apache</p></td>
+<td class="needs_points"><p>6</p></td>
+<td class="needs_code_nice"><p></p></td>
+<td class="needs_pypi_nice"><p><a class="reference external" href="https://pypi.org/project/sphinx-watch/">Link</a></p></td>
+<td class="needs_website_nice"><p></p></td>
+</tr>
+<tr class="need row-even"><td class="needs_id"><p><a class="reference internal" href="../categories/others.html#TABLE-FORMAT">TABLE-FORMAT</a></p></td>
+<td class="needs_title"><p>table-format</p></td>
+<td class="needs_sphinx_type"><p>other</p></td>
+<td class="needs_license"><p>MIT</p></td>
+<td class="needs_points"><p>6</p></td>
+<td class="needs_code_nice"><p></p></td>
+<td class="needs_pypi_nice"><p><a class="reference external" href="https://pypi.org/project/table-format/">Link</a></p></td>
+<td class="needs_website_nice"><p><a class="reference external" href="https://github.com/spookylukey/table-format">Link</a></p></td>
+</tr>
+<tr class="need row-odd"><td class="needs_id"><p><a class="reference internal" href="../categories/extensions.html#SPHINX-EXTRACTOR">SPHINX-EXTRACTOR</a></p></td>
+<td class="needs_title"><p>sphinx-extractor</p></td>
+<td class="needs_sphinx_type"><p>extension</p></td>
+<td class="needs_license"><p>MIT</p></td>
+<td class="needs_points"><p>5</p></td>
+<td class="needs_code_nice"><p><a class="reference external" href="https://github.com/useblocks/sphinx-extractor">Link</a></p></td>
+<td class="needs_pypi_nice"><p><a class="reference external" href="https://pypi.org/project/sphinx-extractor/">Link</a></p></td>
+<td class="needs_website_nice"><p><a class="reference external" href="https://github.com/useblocks/sphinx-extractor">Link</a></p></td>
+</tr>
+<tr class="need row-even"><td class="needs_id"><p><a class="reference internal" href="../categories/others.html#SPHINX-INTERROGATEDB">SPHINX-INTERROGATEDB</a></p></td>
+<td class="needs_title"><p>sphinx-interrogatedb</p></td>
+<td class="needs_sphinx_type"><p>other</p></td>
+<td class="needs_license"><p>BSD</p></td>
+<td class="needs_points"><p>6</p></td>
+<td class="needs_code_nice"><p></p></td>
+<td class="needs_pypi_nice"><p><a class="reference external" href="https://pypi.org/project/sphinx-interrogatedb/">Link</a></p></td>
+<td class="needs_website_nice"><p><a class="reference external" href="https://github.com/panda3d/sphinx-interrogatedb">Link</a></p></td>
+</tr>
+<tr class="need row-odd"><td class="needs_id"><p><a class="reference internal" href="../categories/extensions.html#EXHALE">EXHALE</a></p></td>
+<td class="needs_title"><p>exhale</p></td>
+<td class="needs_sphinx_type"><p>extension</p></td>
+<td class="needs_license"><p>BSD</p></td>
+<td class="needs_points"><p>9</p></td>
+<td class="needs_code_nice"><p></p></td>
+<td class="needs_pypi_nice"><p><a class="reference external" href="https://pypi.org/project/exhale/">Link</a></p></td>
+<td class="needs_website_nice"><p><a class="reference external" href="https://github.com/svenevs/exhale">Link</a></p></td>
+</tr>
+</tbody>
+</table>
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+        </div>
+        
+          <a href="#" class="md-top md-icon" data-md-component="top" hidden>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+            Back to top
+          </a>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+    <nav class="md-footer__inner md-grid" aria-label="Footer" >
+      
+        
+        <a href="famous.html" class="md-footer__link md-footer__link--prev" aria-label="Previous: Famous" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              Famous
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="../rating.html" class="md-footer__link md-footer__link--next" aria-label="Next: Rating" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              Rating
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  
+  
+  <div class="md-footer-meta md-typeset">
+    
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-footer-copyright__highlight">
+        &#169; Copyright 2022, team useblocks.
+        
+    </div>
+  
+    Created using
+    <a href="https://www.sphinx-doc.org/" target="_blank" rel="noopener">Sphinx</a>
+    5.3.0.
+     and
+    <a href="https://github.com/jbms/sphinx-immaterial/" target="_blank" rel="noopener">Sphinx-Immaterial</a>
+  
+  <p>Sponsored and maintained with 💛 by <a href="https://useblocks.com" target="_blank">useblocks</a></p>
+
+</div>
+      
+    </div>
+    
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.top", "search.share", "navigation.tracking", "toc.follow"], "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
+    
+    
+      <script src="../_static/javascripts/bundle.444abb77.min.js"></script>
+        <script src="../_static/sphinx_highlight.js"></script>
+        <script src="../_static/design-tabs.js"></script>
+        <script src="../_static/assets/jsonview.bundle.js"></script>
+        <script src="../_static/assets/jsonview_loader.js"></script>
+        <script src="../_static/sphinx-needs/libs/html/datatables.min.js"></script>
+        <script src="../_static/sphinx-needs/libs/html/datatables_loader.js"></script>
+        <script src="../_static/sphinx-needs/libs/html/sphinx_needs_collapse.js"></script>
+        <script src="../_static/custom.js"></script>
+    
+  </body>
+</html>
