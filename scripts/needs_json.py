@@ -55,7 +55,7 @@ for name, data in pypi_data.items():
         license = "Apache"
 
     # If no license was found or it contains a complete license text
-    if license == '' or len(license) > 25:
+    if license is None or license == '' or len(license) > 25:
         license = 'other'
       
    
